@@ -4,6 +4,7 @@
 }
 
 .overlay-shadow {
+	display:none;
 	position: fixed;
 	height:100%;
 	width:100%;
@@ -12,6 +13,7 @@
 }
 
 .overlay {
+	display:none;
 	width:98%;
 	max-width:700px;
 	min-height:500px;
@@ -39,12 +41,32 @@
 			padding:0 10px;
 			border-top:4px solid #ccc;
 			margin:0;
+			color:#666;
 		}
-		li:hover, li.active {
+		li:hover, a.active-li li {
 			background:#ededed;
 			border-top:4px solid #ed5565;
 		}
 
+	}
+
+	.overlay-content {
+		display:none;
+		padding:10px;
+	}
+
+	.close-overlay {
+		float:right;
+		display:block;
+		width:30px;
+		margin-top:10px;
+		text-align: center;
+		color:#888;
+		font-size:20px;
+	}
+	.close-overlay:hover {
+		cursor:pointer;
+		color:#666;
 	}
 }
 

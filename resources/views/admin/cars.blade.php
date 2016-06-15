@@ -2,13 +2,13 @@
 @extends('layouts.admin')
 
 @section('overlay-nav')
-	<a href="#" class="overlay-link" id="cars"><li class="active">Cars</li></a>
+	<a href="#" class="overlay-link active-li" id="cars"><li>Cars</li></a>
 	<a href="#" class="overlay-link" id="categories"><li>Categories</li></a>
 @stop
 
 @section('overlay-content')
 	<div class="overlay-content" id="cars">
-		Cars
+		Cars form
 	</div>
 	<div class="overlay-content" id="categories">
 		categories
