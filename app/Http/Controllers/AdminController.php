@@ -12,4 +12,9 @@ class AdminController extends Controller
     public function getIndex(){
     	return view('admin/index');
     }
+
+    //Admin cars page
+    public function getCars(){
+    	return view('admin/cars');
+    }
 }

@@ -9,6 +9,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
 <body>
+	<!-- Overlay / Module -->
+	<div class="overlay-shadow"></div>
+	<div class="overlay">
+		<div class="overlay-nav">
+			<ul id="overlay-nav">
+				@yield('overlay-nav')
+			</ul>
+		</div>
+		<div class="overlay-container">
+			@yield('overlay-content')
+		</div>
+	</div>
 	<!-- Sidebar -->
 	<div id="sidebar">
 		<div class="logo">
@@ -84,6 +96,8 @@
 					  });
 				}
 			});
+
+			
 		});
 	</script>
 </body>

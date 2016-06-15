@@ -27,4 +27,6 @@ Route::get('/callback', 'SocialAuthController@callback');
 Route::group(['middleware' => 'admin'], function () {
 	//Admin Dashboard
 	Route::get('/admin', 'AdminController@getIndex');
+	//Admin cars
+	Route::get('/admin/cars', 'AdminController@getCars');
 });
