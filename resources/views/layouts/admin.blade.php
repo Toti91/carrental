@@ -13,6 +13,7 @@
 	<div class="overlay-shadow"></div>
 	<div class="overlay">
 		<div class="overlay-nav">
+			<div class="close-overlay"> <i class="fa fa-remove"></i> </div>
 			<ul id="overlay-nav">
 				@yield('overlay-nav')
 			</ul>
@@ -59,7 +60,7 @@
 			<div class="user-section">
 				<a class="user-action-button" href="#"><i class="fa fa-question"></i></a>
 				<a class="user-action-button" href="#"><i class="fa fa-search"></i></a>
-				<a class="user-action-button" href="#"><i class="fa fa-plus"></i></a>
+				<a class="user-action-button add-button" href="#"><i class="fa fa-plus"></i></a>
 				<a class="user-action-button" href="#"><i class="fa fa-bell-o"></i></a>
 				<a class="user-action-button user-avatar" href="#"> <img src="{{ $user->avatar }}"> </a>
 				<div class="user-name">{{ $user->name }}</div>
@@ -97,7 +98,52 @@
 				}
 			});
 
-			
+			$('.add-button').click(function(){
+				showOverlay();
+			});
+
+			$('.close-overlay').click(function(){
+				closeOverlay();
+			});
+
+			var contents = $('.overlay-content'),
+				links = $('.overlay-link');
+
+			links.click(function(){
+				var active = $(this).attr('id'),
+					content = $('#'+active+'.overlay-content');
+
+				links.removeClass('active-li');
+				$(this).addClass('active-li');
+				contents.hide(function(){
+					content.fadeIn();
+				});
+			});
+
+			function closeOverlay(){
+				var shadow = $('.overlay-shadow'),
+					overlay = $('.overlay'),
+					content = $('.overlay-content');
+
+				content.fadeOut();
+				overlay.slideUp(function(){
+					shadow.hide();
+				});
+			}
+
+			function showOverlay(){
+				var shadow = $('.overlay-shadow'),
+					overlay = $('.overlay'),
+					active = $('.active-li').attr('id'),
+					content = $('#'+active+'.overlay-content'),
+					contents = $('.overlay-content'),
+					links = $('overlay-link');
+
+				shadow.show();;
+				overlay.slideDown(function(){
+					content.fadeIn();
+				});
+			}
 		});
 	</script>
 </body>

@@ -15,6 +15,7 @@
 			<input type="number" name="price" placeholder="Price"><br>
 			<input type="submit" id="submit-car">
 		</form>
+		Cars form
 	</div>
 	<div class="overlay-content" id="categories">
 		<form method="POST" action="/admin/cars/newcategory">
