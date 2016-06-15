@@ -1,4 +1,7 @@
-<?PHP $active = 'cars'; ?>
+<?PHP 
+	$active = 'cars'; 
+	$categories = \App\Category::get();
+?>
 @extends('layouts.admin')
 
 @section('overlay-nav')
@@ -8,23 +11,26 @@
 
 @section('overlay-content')
 	<div class="overlay-content" id="cars">
-		<form method="POST" action="/admin/cars/new">
+		<form method="POST" action="/admin/cars/new" class="input-default">
 			{{ csrf_field() }}
-			<input type="number" name="category-id" placeholder="Category-Id"><br>
-			<input type="string" name="name" placeholder="Name"><br>
-			<input type="number" name="price" placeholder="Price"><br>
-			<input type="submit" id="submit-car">
+			<select name="category-id" class="input-default">
+				@foreach($categories as $category)
+					<option value="{{ $category->id }}"> {{ $category->category }} - {{ $category->name }} </option>
+				@endforeach
+			</select>
+			<input type="text" name="name" placeholder="Name" class="input-default">
+			<input type="number" name="price" placeholder="Price" class="input-default">
+			<input type="submit" id="submit-car" class="submit-default">
 		</form>
-		Cars form
 	</div>
 	<div class="overlay-content" id="categories">
 		<form method="POST" action="/admin/cars/newcategory">
 			{{ csrf_field() }}
-			<input type="text" name="category" placeholder="category"><br>
-			<input type="text" name="name" placeholder="Name"><br>
-			<input type="number" name="price-min" placeholder="Price-Min"><br>
-			<input type="number" name="price-max" placeholder="Price-Max"><br>
-			<input type="submit" id="submit-category">
+			<input type="text" name="category" placeholder="category" class="input-default">
+			<input type="text" name="name" placeholder="Name" class="input-default">
+			<input type="number" name="price-min" placeholder="Price-Min" class="input-default input-2 leftFloat">
+			<input type="number" name="price-max" placeholder="Price-Max" class="input-default input-2 rightFloat">
+			<input type="submit" id="submit-category" class="submit-default">
 		</form>
 	</div>
 @stop

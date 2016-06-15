@@ -19,7 +19,7 @@ class AdminController extends Controller
     }
 
     public function createCategory(){
-    	$cat = new \App\Categories;
+    	$cat = new \App\Category;
     	$cat->category = $_POST['category'];
     	$cat->name = $_POST['name'];
     	$cat->price_min = $_POST['price-min'];

@@ -115,8 +115,8 @@
 
 				links.removeClass('active-li');
 				$(this).addClass('active-li');
-				contents.hide(function(){
-					content.fadeIn();
+				contents.slideUp(function(){
+					content.slideDown();
 				});
 			});
 
