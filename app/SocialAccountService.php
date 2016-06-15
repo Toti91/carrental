@@ -25,9 +25,16 @@ class SocialAccountService
 
             if (!$user) {
 
+                if($providerUser->getEmail()){
+                    $email = $providerUser->getEmail();
+                } else {
+                    $email = $providerUser->getId();
+                }
+
                 $user = User::create([
                     'email' => $providerUser->getEmail(),
                     'name' => $providerUser->getName(),
+                    'avatar' => $providerUser->getAvatar(),
                 ]);
             }
 

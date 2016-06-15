@@ -41,7 +41,7 @@ return [
     'facebook' => [
     'client_id' => '1747406888876454',
     'client_secret' => '3f50e3ee88ecf27bd91461ddafdca6e7',
-    'redirect' => 'http://localhost/carrental/public/callback',
+    'redirect' => 'http://carrental.dev/callback',
 ],
 
 ];

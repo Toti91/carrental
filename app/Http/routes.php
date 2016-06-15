@@ -22,3 +22,9 @@ Route::get('/home', 'HomeController@index');
 //Socialite reidrects
 Route::get('/redirect', 'SocialAuthController@redirect');
 Route::get('/callback', 'SocialAuthController@callback');
+
+//Admin routes
+Route::group(['middleware' => 'admin'], function () {
+	//Admin Dashboard
+	Route::get('/admin', 'AdminController@getIndex');
+});
