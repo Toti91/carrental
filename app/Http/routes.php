@@ -29,4 +29,8 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::get('/admin', 'AdminController@getIndex');
 	//Admin cars
 	Route::get('/admin/cars', 'AdminController@getCars');
+	//Admin new category
+	Route::post('/admin/cars/newcategory', 'AdminController@createCategory');
+	//Admin new car
+	Route::post('/admin/cars/new', 'AdminController@createCar');
 });
