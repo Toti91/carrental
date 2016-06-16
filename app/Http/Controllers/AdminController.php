@@ -50,11 +50,18 @@ class AdminController extends Controller
 	    	$car->price = $_POST['price'];
 
 	    	//Image upload
-	    	$image = $_FILES['image']['tmp_name'];
-	    	$filename = time() . '.' . Input::file('image')->getClientOriginalExtension();
-	   		$path = public_path('useruploads/' . $filename);
-			Image::make(Input::file('image')->getRealPath())->resize(200, 200)->save($path);
-	    	$car->image = $filename;
+	    	if($_FILES['image']['size'] > 1000000){
+	    		
+	    		throw new RuntimeException('Exceeded filesize limit');
+	    	}
+	    	else{
+
+	    		$image = $_FILES['image']['tmp_name'];
+	    		$filename = time() . '.' . Input::file('image')->getClientOriginalExtension();
+	   			$path = public_path('useruploads/' . $filename);
+				Image::make(Input::file('image')->getRealPath())->resize(200, 200)->save($path);
+	    		$car->image = $filename;
+	    	}
 
 	    	$car->status = 'enabled';
 	    	$car->save();
