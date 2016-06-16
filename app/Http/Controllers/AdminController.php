@@ -2,7 +2,12 @@
 
 namespace App\Http\Controllers;
 
+require 'C:\xampp\htdocs\carrental\vendor\autoload.php';
+
+use Intervention\Image\ImageManager;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+use Image;
 
 use App\Http\Requests;
 
@@ -43,6 +48,14 @@ class AdminController extends Controller
 	    	$car->category_id = $_POST['category-id'];
 	    	$car->name = $_POST['name'];
 	    	$car->price = $_POST['price'];
+
+	    	//Image upload
+	    	$image = $_FILES['image']['tmp_name'];
+	    	$filename = time() . '.' . Input::file('image')->getClientOriginalExtension();
+	   		$path = public_path('useruploads/' . $filename);
+			Image::make(Input::file('image')->getRealPath())->resize(200, 200)->save($path);
+	    	$car->image = $filename;
+
 	    	$car->status = 'enabled';
 	    	$car->save();
 

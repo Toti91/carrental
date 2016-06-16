@@ -10,7 +10,7 @@
 
 @section('overlay-content')
 	<div class="overlay-content" id="cars">
-		<form method="POST" action="/admin/cars/new" class="input-default">
+		<form method="POST" action="/admin/cars/new" class="input-default" enctype="multipart/form-data">
 			{{ csrf_field() }}
 			<select name="category-id" class="input-default">
 				@foreach($categories as $category)
@@ -19,6 +19,7 @@
 			</select>
 			<input type="text" name="name" placeholder="Name" class="input-default">
 			<input type="number" name="price" placeholder="Price" class="input-default">
+			<input type="file" name="image" accept="image/*">
 			<input type="submit" id="submit-car" class="submit-default">
 		</form>
 	</div>
@@ -47,7 +48,7 @@
 	<div class="content content-6">
 		@foreach($cars as $car)
 			<div class="single-item">
-				<div class="si-icon"> <img src="{{ Auth::user()->avatar }}"> </div>
+				<div class="si-icon"> <img src="/useruploads/{{ $car->image }}"> </div>
 				<div class="si-top">
 					<div class="si-name"> {{ $car->name }} </div>
 					<div class="si-price"> {{ number_format($car->price, 0, ',', '.') }} ISK </div>

@@ -18,6 +18,7 @@ class CreateCarTable extends Migration
             $table->string('name');
             $table->integer('price');
             $table->string('status');
+            $table->string('image');
             $table->timestamps();
         });
     }
