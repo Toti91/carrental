@@ -17,6 +17,7 @@ class CreateCarTable extends Migration
             $table->integer('category_id');
             $table->string('name');
             $table->integer('price');
+            $table->string('status');
             $table->timestamps();
         });
     }

@@ -22,6 +22,25 @@
 			@yield('overlay-content')
 		</div>
 	</div>
+
+	<!-- Flash messages -->
+
+	@if(session()->has('flash_success'))
+		<div class="alert success-alert">
+			{{ session()->get('flash_success') }}
+		</div>
+	@endif
+	@if(session()->has('flash_error'))
+		<div class="alert error-alert">
+			{{ session()->get('flash_error') }}
+		</div>
+	@endif
+	@if(session()->has('flash_info'))
+		<div class="alert info-alert">
+			{{ session()->get('flash_info') }}
+		</div>
+	@endif
+
 	<!-- Sidebar -->
 	<div id="sidebar">
 		<div class="logo">
@@ -67,7 +86,7 @@
 			</div>
 		</div>
 		<div id="title-bar">
-			@yield('titlebar') 
+			@yield('title-bar') 
 		</div>
 
 		@yield('container')
@@ -144,6 +163,13 @@
 					content.fadeIn();
 				});
 			}
+		});
+
+		$(document).ready(function(){
+			// Alert / Flash messages
+		    if($('.alert').is(':visible')){
+		        $('.alert').delay(3000).fadeOut();
+		    }
 		});
 	</script>
 </body>

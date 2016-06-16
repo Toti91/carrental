@@ -9,6 +9,28 @@ html, body	 	{ margin:0; padding:0; height:100%; background:#fff; }
 
 #wrapper 		{ min-height:100%; position:relative; }
 
+// Alerts / Flash messages
+.alert 	{
+	position:fixed;
+	top:100px;
+	right:0;
+	height:30px;
+	border-left:3px solid #ccc;
+	background:#222;
+	color:#ededed;
+	line-height:30px;
+	padding:0 6px;
+	font-weight:300;
+}
+.success-alert {
+	border-left:3px solid #22d14b;
+}
+.error-alert {
+	border-left:3px solid #ed5555;
+}
+.info-alert {
+	border-left:3px solid #ced600;
+}
 
 @import "normalize.less";
 @import "adminHeader.less";

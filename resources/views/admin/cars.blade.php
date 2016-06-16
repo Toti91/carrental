@@ -1,6 +1,5 @@
 <?PHP 
 	$active = 'cars'; 
-	$categories = \App\Category::get();
 ?>
 @extends('layouts.admin')
 
@@ -35,7 +34,51 @@
 	</div>
 @stop
 
+@section('title-bar')
+	<div class="content-6 title-bar-content">
+		<h3>Cars</h3>
+	</div>
+	<div class="content-4 title-bar-content">
+		<h3>Categories</h3>
+	</div>
+@stop
 
 @section('container')
-	Cars
+	<div class="content content-6">
+		@foreach($cars as $car)
+			<div class="single-item">
+				<div class="si-icon"> <img src="{{ Auth::user()->avatar }}"> </div>
+				<div class="si-top">
+					<div class="si-name"> {{ $car->name }} </div>
+					<div class="si-price"> {{ number_format($car->price, 0, ',', '.') }} ISK </div>
+				</div>
+				<div class="si-bottom">
+					<div class="si-status status-{{ $car->status }}"> <a href="#">{{ $car->status }}</a> </div>
+					<div class="si-actions">
+						<a href="#">edit</a>
+						<a href="#">remove</a>
+					</div>
+				</div>
+			</div>
+		@endforeach
+	</div>
+	<div class="content content-4">
+		@foreach($categories as $category)
+			<div class="single-item">
+				<div class="si-icon"> <img src="{{ Auth::user()->avatar }}"> </div>
+				<div class="si-top">
+					<div class="si-name"> {{ $category->category }} - {{ $category->name }} </div>
+					<div class="si-price"> 
+						${{ number_format($category->price_min, 0, ',', '.') }} - ${{ number_format($category->price_max, 0, ',', '.') }} 
+					</div>
+				</div>
+				<div class="si-bottom">
+					<div class="si-actions">
+						<a href="#">edit</a>
+						<a href="#">remove</a>
+					</div>
+				</div>
+			</div>
+		@endforeach
+	</div>
 @stop

@@ -15,27 +15,42 @@ class AdminController extends Controller
 
     //Admin cars page
     public function getCars(){
-    	return view('admin/cars');
+    	$cars = \App\Car::get();
+    	$categories = \App\Category::get();
+    	return view('admin/cars')->with('cars', $cars)->with('categories', $categories);
     }
 
     public function createCategory(){
-    	$cat = new \App\Category;
-    	$cat->category = $_POST['category'];
-    	$cat->name = $_POST['name'];
-    	$cat->price_min = $_POST['price-min'];
-    	$cat->price_max = $_POST['price-max'];
-    	$cat->save();
+    	if($_POST['name'] && $_POST['price-min'] && $_POST['price-max']){
+	    	$cat = new \App\Category;
+	    	$cat->category = $_POST['category'];
+	    	$cat->name = $_POST['name'];
+	    	$cat->price_min = $_POST['price-min'];
+	    	$cat->price_max = $_POST['price-max'];
+	    	$cat->save();
 
+	    	session()->flash('flash_success', $cat->name . ' created!');
+    		return redirect('/admin/cars');
+	    }
+
+    	session()->flash('flash_error', 'Form filled out incorrectly!');
     	return redirect('/admin/cars');
     }
 
     public function createCar(){
-    	$car = new \App\Car;
-    	$car->category_id = $_POST['category-id'];
-    	$car->name = $_POST['name'];
-    	$car->price = $_POST['price'];
-    	$car->save();
+    	if($_POST['name'] && $_POST['category-id'] && $_POST['price']){
+	    	$car = new \App\Car;
+	    	$car->category_id = $_POST['category-id'];
+	    	$car->name = $_POST['name'];
+	    	$car->price = $_POST['price'];
+	    	$car->status = 'enabled';
+	    	$car->save();
 
+	    	session()->flash('flash_success', $car->name . ' created!');
+    		return redirect('/admin/cars');
+	    }
+
+    	session()->flash('flash_error', 'Form filled out incorrectly!');
     	return redirect('/admin/cars');
     }
 }
