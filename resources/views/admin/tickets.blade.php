@@ -32,8 +32,10 @@
 	<div class="content content-4">
 		<?PHP 
 			$i = 1;
-			$firstTicketId = \App\Ticket::orderBy('status')->first()->id;
-			if(!$firstTicketId){
+			if(\App\Ticket::orderBy('status')->first()){
+				$firstTicketId = \App\Ticket::orderBy('status')->first()->id;
+			}
+			else {
 				$firstTicketId = 0;
 			}
 		?>
