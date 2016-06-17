@@ -63,7 +63,7 @@ class AdminController extends Controller
 	    		$image = $_FILES['image']['tmp_name'];
 	    		$filename = time() . '.' . Input::file('image')->getClientOriginalExtension();
 	   			$path = public_path('useruploads/' . $filename);
-				Image::make(Input::file('image')->getRealPath())->resize(200, 200)->save($path);
+				Image::make(Input::file('image')->getRealPath())->fit(200, 200)->save($path);
 	    		$car->image = $filename;
 	    	}
 
