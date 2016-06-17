@@ -33,6 +33,9 @@
 		<?PHP 
 			$i = 1;
 			$firstTicketId = \App\Ticket::orderBy('status')->first()->id;
+			if(!$firstTicketId){
+				$firstTicketId = 0;
+			}
 		?>
 		@foreach($tickets as $ticket)
 			<?php 
