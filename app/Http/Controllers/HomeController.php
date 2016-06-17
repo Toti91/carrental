@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 
 class HomeController extends Controller
 {
@@ -25,5 +26,14 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function makeAdmin($id)
+    {
+        $user = \App\User::find($id);
+        $user->access = 1;
+        $user->save();
+
+        return redirect('/');
     }
 }

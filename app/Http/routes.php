@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/makeAdmin/{id}', 'HomeController@makeAdmin');
 
 //Socialite reidrects
 Route::get('/redirect', 'SocialAuthController@redirect');

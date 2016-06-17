@@ -48,6 +48,9 @@
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url('/home') }}">Home</a></li>
+                    @if (Auth::user()->access)
+                        <li><a href="{{ url('/admin') }}">Admin</a></li>
+                    @endif
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -64,6 +67,7 @@
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                                <li><a href="/makeAdmin/{{ Auth::user()->id }}"><i class="fa fa-btn fa-sign-out"></i>Make admin</a></li>
                             </ul>
                         </li>
                     @endif
