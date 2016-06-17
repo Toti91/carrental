@@ -24,6 +24,11 @@ class AdminController extends Controller
     	return view('admin/cars')->with('cars', $cars)->with('categories', $categories);
     }
 
+    public function getUsers(){
+    	$users = \App\User::get();
+    	return view('admin/users')->with('users', $users);
+    }
+
     public function createCategory(){
     	if($_POST['name'] && $_POST['price-min'] && $_POST['price-max']){
 	    	$cat = new \App\Category;

@@ -107,7 +107,7 @@
 	               	container.fadeOut(function(){
 	               		container.html(data).fadeIn();
 	               		var input = $('#new-comment'),
-	               			userId = '{{ $user->id }}',
+	               			userId = '{{ Auth::user()->id }}',
 	               			commentContainer = $('.ticket-comments');
 
 						input.on('keypress', function(e) {

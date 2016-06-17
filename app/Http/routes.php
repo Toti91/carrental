@@ -41,4 +41,6 @@ Route::group(['middleware' => 'admin'], function () {
 		//Admin get single ticket w. AJAX
 		Route::post('/admin/ticket/{id}', 'AdminController@getTicket');
 		Route::post('/admin/ticket/newcomment/{id}', 'AdminController@addComment');
+
+	Route::get('/admin/users', 'AdminController@getUsers');
 });
