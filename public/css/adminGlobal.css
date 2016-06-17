@@ -26,6 +26,7 @@ body {
   padding: 0;
   height: 100%;
   background: #fff;
+  position: relative;
 }
 #wrapper {
   min-height: 100%;
@@ -414,6 +415,7 @@ th {
   background: #323436;
   height: 100%;
   color: #f9f9f9;
+  position: fixed;
 }
 .logo {
   width: 100%;
@@ -463,6 +465,7 @@ ul#sidebar-nav li.active {
 #container {
   overflow: hidden;
   min-height: 50px;
+  padding-left: 220px;
 }
 .content {
   border-right: 1px solid #ededed;
@@ -536,6 +539,12 @@ ul#sidebar-nav li.active {
   margin-top: -4px;
   border-bottom: 1px solid #ededed;
 }
+.overlay ul#overlay-nav h2 {
+  font-weight: 300;
+  color: #666;
+  line-height: 60px;
+  text-indent: 10px;
+}
 .overlay ul#overlay-nav li {
   display: inline-block;
   text-decoration: none;
@@ -553,6 +562,9 @@ ul#sidebar-nav li.active {
 .overlay ul#overlay-nav a.active-li li {
   background: #ededed;
   border-top: 4px solid #ed5565;
+}
+.overlay .single-overlay-content {
+  padding: 10px;
 }
 .overlay .overlay-content {
   display: none;
@@ -643,6 +655,24 @@ ul#sidebar-nav li.active {
 #title-bar .title-bar-content h3 {
   font-weight: 300;
 }
+.si-new {
+  border-left: 2px solid #ed5555;
+}
+.si-high {
+  border-left: 2px solid #22d14b;
+}
+.si-medium {
+  border-left: 2px solid #3c8ddf;
+}
+.si-low {
+  border-left: 2px solid #f5f75e;
+}
+.si-finished {
+  border-left: 2px solid #ccc;
+}
+.ticket-link {
+  text-decoration: none;
+}
 .single-item {
   width: 100%;
   padding: 10px;
@@ -681,6 +711,11 @@ ul#sidebar-nav li.active {
   font-size: 12px;
   margin-right: 15px;
 }
+.single-item .si-description {
+  font-size: 14px;
+  color: #666;
+  font-weight: 300;
+}
 .single-item .status-enabled a {
   color: green;
   text-decoration: none;
@@ -703,10 +738,127 @@ ul#sidebar-nav li.active {
 .single-item .si-actions a:hover {
   color: #666;
 }
-.single-item:hover {
+.single-item:hover,
+a.si-active > .single-item {
   background: #f9f9f9;
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
+}
+#ticket {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100%;
+  overflow: auto;
+}
+#ticket .ticket-header {
+  width: 100%;
+  height: 50px;
+}
+#ticket .ticket-header .ticket-assigned-user {
+  float: left;
+}
+#ticket .ticket-header .ticket-assigned-user a {
+  color: #888;
+  text-decoration: none;
+  font-weight: 300;
+}
+#ticket .ticket-header .ticket-assigned-user a i {
+  font-size: 12px;
+  margin-left: 4px;
+}
+#ticket .ticket-header .ticket-assigned-user a:hover {
+  color: #666;
+}
+#ticket .ticket-header .ticket-assigned-user .tau-avatar {
+  float: left;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  border-radius: 3px;
+  opacity: 0.8;
+  margin-right: 4px;
+}
+#ticket .ticket-header .ticket-assigned-user .tau-avatar img {
+  width: 30px;
+}
+#ticket .ticket-header .ticket-assigned-user .tau-name {
+  color: #666;
+  font-weight: 400;
+  float: left;
+  font-size: 14px;
+}
+#ticket .ticket-header .ticket-assigned-user small {
+  float: left;
+  font-size: 12px;
+  color: #888;
+  font-weight: 300;
+  margin-top: -1px;
+}
+#ticket .ticket-header .ticket-actions {
+  float: right;
+}
+#ticket .ticket-header .ticket-actions a {
+  color: #888;
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 14px;
+}
+#ticket .ticket-header .ticket-actions a:hover {
+  color: #666;
+}
+#ticket .ticket-subject {
+  width: 100%;
+  border-top: 1px solid #f9f9f9;
+  padding: 10px 0;
+}
+#ticket .ticket-subject h3 {
+  color: #666;
+  font-weight: 300;
+}
+#ticket .ticket-message {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f9f9f9;
+}
+#ticket .ticket-message p {
+  color: #444;
+  font-weight: 400;
+}
+#ticket .comment {
+  border-bottom: 1px solid #f9f9f9;
+  padding: 5px;
+}
+#ticket .comment .comment-user .cu-avatar {
+  float: left;
+  height: 60px;
+  width: 60px;
+  overflow: hidden;
+  border-radius: 100%;
+  opacity: 0.8;
+  margin-right: 15px;
+}
+#ticket .comment .comment-user .cu-avatar img {
+  width: 60px;
+}
+#ticket .comment .comment-user .cu-name {
+  color: #444;
+  font-weight: 400;
+  float: left;
+  font-size: 14px;
+  margin-top: 10px;
+}
+#ticket .comment .comment-message {
+  padding-left: 75px;
+  padding-top: 16px;
+}
+#ticket .comment .comment-message p {
+  color: #888;
+  font-weight: 400;
+  font-size: 14px;
+}
+#ticket .new-comment {
+  margin-top: 10px;
 }
 .input-default {
   width: 100%;
@@ -717,6 +869,15 @@ ul#sidebar-nav li.active {
 }
 .input-2 {
   width: 48%;
+}
+.textarea-default {
+  width: 100%;
+  min-height: 220px;
+  border: 1px solid #ededed;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  padding: 10px;
+  box-sizing: border-box;
 }
 .submit-default {
   height: 40px;

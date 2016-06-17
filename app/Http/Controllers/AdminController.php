@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-require 'C:\xampp\htdocs\carrental\vendor\autoload.php';
 
 use Intervention\Image\ImageManager;
 use Illuminate\Http\Request;
@@ -72,5 +71,54 @@ class AdminController extends Controller
 
     	session()->flash('flash_error', 'Form filled out incorrectly!');
     	return redirect('/admin/cars');
+    }
+
+    //Tickets
+    public function getTickets(){
+    	$tickets = \App\Ticket::orderBy('status')->get();
+
+    	return view('admin/tickets')->with('tickets', $tickets);
+    }
+
+    public function getTicket($id){
+    	$ticket = \App\Ticket::find($id);
+    	$comments = $ticket->comments;
+    	$assigned = null;
+    	if($ticket->user){
+    		$assigned = $ticket->user;
+    	}
+
+    	return view('admin.pages.ticket')->with('ticket', $ticket)->with('comments', $comments)->with('assigned', $assigned);
+    }
+
+    public function createTicket(){
+    	if($_POST['subject'] && $_POST['description']){
+    		$ticket = new \App\Ticket;
+    		$ticket->email = $_POST['email'];
+    		$ticket->assigned_user_id = 0;
+    		$ticket->subject = $_POST['subject'];
+    		$ticket->description = $_POST['description'];
+    		$ticket->status = 0;
+    		$ticket->save();
+
+    		session()->flash('flash_success', 'New ticket created!');
+    		return redirect('/admin/tickets');
+    	}
+
+    	session()->flash('flash_error', 'Form filled out incorrectly!');
+    	return redirect('/admin/tickets');
+    }
+
+    public function addComment($id){
+    	if($_POST['message']){
+    		$comment = new \App\TicketComment;
+    		$comment->ticket_id = $id;
+    		$comment->user_id = $_POST['userId'];
+    		$comment->comment = $_POST['message'];
+    		$comment->save();
+
+    		return view('admin.pages.singlecomment')->with('comment', $comment);
+    	}
+    	return false;
     }
 }

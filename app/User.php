@@ -23,4 +23,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function tickets() {
+        return $this->hasMany('\App\Ticket', 'assigned_user_id', 'id');
+    }
+
+    public function ticketComments(){
+        return $this->hasMany('\App\TicketComment');
+    }
 }

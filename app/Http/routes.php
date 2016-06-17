@@ -29,8 +29,16 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::get('/admin', 'AdminController@getIndex');
 	//Admin cars
 	Route::get('/admin/cars', 'AdminController@getCars');
-	//Admin new category
-	Route::post('/admin/cars/newcategory', 'AdminController@createCategory');
-	//Admin new car
-	Route::post('/admin/cars/new', 'AdminController@createCar');
+		//Admin new category
+		Route::post('/admin/cars/newcategory', 'AdminController@createCategory');
+		//Admin new car
+		Route::post('/admin/cars/new', 'AdminController@createCar');
+
+	//Admin tickets
+	Route::get('/admin/tickets', 'AdminController@getTickets');
+		//Admin new ticket
+		Route::post('/admin/tickets/new', 'AdminController@createTicket');
+		//Admin get single ticket w. AJAX
+		Route::post('/admin/ticket/{id}', 'AdminController@getTicket');
+		Route::post('/admin/ticket/newcomment/{id}', 'AdminController@addComment');
 });

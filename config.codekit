@@ -245,6 +245,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/Ticket.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/Ticket.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/TicketComment.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/TicketComment.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/User.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -472,6 +490,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/database\/migrations\/2016_06_16_213334_creat_tickets_table.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/database\/migrations\/2016_06_16_213334_creat_tickets_table.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/database\/migrations\/2016_06_16_213352_creat_ticket_comments_table.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/database\/migrations\/2016_06_16_213352_creat_ticket_comments_table.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/database\/seeds\/DatabaseSeeder.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -661,6 +697,72 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/public\/useruploads\/1466101433.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14870,
+		"inputAbbreviatedPath": "\/public\/useruploads\/1466101433.jpg",
+		"outputAbbreviatedPath": "\/public\/useruploads\/1466101433.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/1466101919.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14228,
+		"inputAbbreviatedPath": "\/public\/useruploads\/1466101919.jpg",
+		"outputAbbreviatedPath": "\/public\/useruploads\/1466101919.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/1466102154.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14872,
+		"inputAbbreviatedPath": "\/public\/useruploads\/1466102154.jpg",
+		"outputAbbreviatedPath": "\/public\/useruploads\/1466102154.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/1466103546.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14186,
+		"inputAbbreviatedPath": "\/public\/useruploads\/1466103546.jpg",
+		"outputAbbreviatedPath": "\/public\/useruploads\/1466103546.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/1466104721.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 8088,
+		"inputAbbreviatedPath": "\/public\/useruploads\/1466104721.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/1466104721.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/1466113155.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 14872,
+		"inputAbbreviatedPath": "\/public\/useruploads\/1466113155.jpg",
+		"outputAbbreviatedPath": "\/public\/useruploads\/1466113155.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/readme.md": {
 		"criticStyle": 0,
 		"enableFootnotes": 1,
@@ -748,6 +850,33 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/resources\/views\/admin\/index.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/resources\/views\/admin\/pages\/singlecomment.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resources\/views\/admin\/pages\/singlecomment.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/resources\/views\/admin\/pages\/ticket.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resources\/views\/admin\/pages\/ticket.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/resources\/views\/admin\/tickets.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resources\/views\/admin\/tickets.blade.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -860,6 +989,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/storage\/framework\/views\/1eb7142e7152108e6bbab5425113d96c4ed74036.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/storage\/framework\/views\/1eb7142e7152108e6bbab5425113d96c4ed74036.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/storage\/framework\/views\/1f0ff3ef14a7f3ceee87d62f78bbdb4ee3b58d0e.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -887,6 +1025,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/storage\/framework\/views\/6230778a9d8d42a03797f6a482c5ab0eaf3eeaf9.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/storage\/framework\/views\/6230778a9d8d42a03797f6a482c5ab0eaf3eeaf9.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/storage\/framework\/views\/74f9a696736c0806ce7e6b5cb6da25266078ced4.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -901,6 +1048,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/storage\/framework\/views\/86e3048e212b3da9d9eb96696518a79f9c3b5529.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/storage\/framework\/views\/91170e6721e4a9b5ed980671bc98f70e2ffbb3e0.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/storage\/framework\/views\/91170e6721e4a9b5ed980671bc98f70e2ffbb3e0.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -12511,6 +12667,1153 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/vendor\/hamcrest\/hamcrest-php\/tests\/Hamcrest\/Xml\/HasXPathTest.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/composer.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/composer.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/vendor\/intervention\/image\/composer-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/vendor\/intervention\/image\/provides.json": {
+		"fileType": 524288,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/provides.json",
+		"orderOutput": 0,
+		"outputAbbreviatedPath": "\/vendor\/intervention\/image\/provides-min.json",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1
+		},
+	"\/vendor\/intervention\/image\/src\/config\/config.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/config\/config.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractColor.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractColor.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractDecoder.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractDecoder.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractDriver.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractDriver.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractEncoder.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractEncoder.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractFont.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractFont.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/AbstractShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/AbstractCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/AbstractCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/Argument.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/Argument.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/ChecksumCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/ChecksumCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/CircleCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/CircleCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/EllipseCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/EllipseCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/ExifCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/ExifCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/IptcCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/IptcCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/LineCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/LineCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/OrientateCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/OrientateCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/PolygonCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/PolygonCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/PsrResponseCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/PsrResponseCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/RectangleCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/RectangleCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/ResponseCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/ResponseCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/StreamCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/StreamCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/TextCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Commands\/TextCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Constraint.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Constraint.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/InvalidArgumentException.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/InvalidArgumentException.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/MissingDependencyException.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/MissingDependencyException.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/NotFoundException.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/NotFoundException.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/NotReadableException.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/NotReadableException.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/NotSupportedException.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/NotSupportedException.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/NotWritableException.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/NotWritableException.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/RuntimeException.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Exception\/RuntimeException.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Facades\/Image.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Facades\/Image.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/File.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/File.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Filters\/DemoFilter.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Filters\/DemoFilter.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Filters\/FilterInterface.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Filters\/FilterInterface.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Color.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Color.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/BackupCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/BackupCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/BlurCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/BlurCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/BrightnessCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/BrightnessCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/ColorizeCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/ColorizeCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/ContrastCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/ContrastCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/CropCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/CropCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/DestroyCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/DestroyCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/FillCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/FillCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/FitCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/FitCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/FlipCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/FlipCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/GammaCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/GammaCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/GetSizeCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/GetSizeCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/GreyscaleCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/GreyscaleCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/HeightenCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/HeightenCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/InsertCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/InsertCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/InterlaceCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/InterlaceCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/InvertCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/InvertCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/LimitColorsCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/LimitColorsCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/MaskCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/MaskCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/OpacityCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/OpacityCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/PickColorCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/PickColorCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/PixelateCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/PixelateCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/PixelCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/PixelCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/ResetCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/ResetCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/ResizeCanvasCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/ResizeCanvasCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/ResizeCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/ResizeCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/RotateCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/RotateCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/SharpenCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/SharpenCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/TrimCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/TrimCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/WidenCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Commands\/WidenCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Decoder.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Decoder.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Driver.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Driver.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Encoder.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Encoder.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Font.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Font.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Shapes\/CircleShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Shapes\/CircleShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Shapes\/EllipseShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Shapes\/EllipseShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Shapes\/LineShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Shapes\/LineShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Shapes\/PolygonShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Shapes\/PolygonShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Shapes\/RectangleShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Gd\/Shapes\/RectangleShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Image.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Image.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageManager.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageManager.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageManagerStatic.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageManagerStatic.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageServiceProvider.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageServiceProvider.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageServiceProviderLaravel4.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageServiceProviderLaravel4.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageServiceProviderLaravel5.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageServiceProviderLaravel5.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageServiceProviderLeague.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageServiceProviderLeague.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageServiceProviderLumen.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/ImageServiceProviderLumen.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Color.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Color.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/BackupCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/BackupCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/BlurCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/BlurCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/BrightnessCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/BrightnessCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/ColorizeCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/ColorizeCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/ContrastCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/ContrastCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/CropCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/CropCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/DestroyCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/DestroyCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/FillCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/FillCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/FitCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/FitCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/FlipCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/FlipCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/GammaCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/GammaCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/GetSizeCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/GetSizeCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/GreyscaleCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/GreyscaleCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/HeightenCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/HeightenCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/InsertCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/InsertCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/InterlaceCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/InterlaceCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/InvertCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/InvertCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/LimitColorsCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/LimitColorsCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/MaskCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/MaskCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/OpacityCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/OpacityCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/PickColorCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/PickColorCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/PixelateCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/PixelateCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/PixelCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/PixelCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/ResetCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/ResetCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/ResizeCanvasCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/ResizeCanvasCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/ResizeCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/ResizeCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/RotateCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/RotateCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/SharpenCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/SharpenCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/TrimCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/TrimCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/WidenCommand.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Commands\/WidenCommand.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Decoder.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Decoder.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Driver.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Driver.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Encoder.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Encoder.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Font.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Font.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Shapes\/CircleShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Shapes\/CircleShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Shapes\/EllipseShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Shapes\/EllipseShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Shapes\/LineShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Shapes\/LineShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Shapes\/PolygonShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Shapes\/PolygonShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Shapes\/RectangleShape.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Imagick\/Shapes\/RectangleShape.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Point.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Point.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Response.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Response.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/intervention\/image\/src\/Intervention\/Image\/Size.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/intervention\/image\/src\/Intervention\/Image\/Size.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

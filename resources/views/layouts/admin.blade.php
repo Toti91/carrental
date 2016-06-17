@@ -97,6 +97,7 @@
 		$(document).ready(function(){
 			$('.menu-button').click(function(){
 				var sidebar = $('#sidebar'),
+					container = $('#container'),
 					names = $('.wide-sidebar'),
 					logo = $('.logo');
 
@@ -105,6 +106,10 @@
 						sidebar.animate({
 						    width: '52px'
 						}, 300);
+						container.animate({
+						    paddingLeft: '52px'
+						}, 300);
+
 					});
 					names.fadeOut();
 				} else {
@@ -114,6 +119,9 @@
 					    logo.slideDown();
 					    names.fadeIn();
 					  });
+					container.animate({
+						    paddingLeft: '220px'
+						}, 300);
 				}
 			});
 
@@ -172,5 +180,6 @@
 		    }
 		});
 	</script>
+	@yield('script')
 </body>
 </html>

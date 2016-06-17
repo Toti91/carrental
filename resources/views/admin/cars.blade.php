@@ -19,7 +19,7 @@
 			</select>
 			<input type="text" name="name" placeholder="Name" class="input-default">
 			<input type="number" name="price" placeholder="Price" class="input-default">
-			<input type="file" name="image" accept="image/*">
+			<input type="file" name="image" accept="image/*" class="input-default">
 			<input type="submit" id="submit-car" class="submit-default">
 		</form>
 	</div>
