@@ -1,4 +1,6 @@
-<?PHP $user = Auth::user(); ?>
+<?PHP 
+	$user = Auth::user(); 
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -77,10 +79,20 @@
 			</div>
 
 			<div class="user-section">
+				<!-- These show as needed -->
 				<a class="user-action-button" href="#"><i class="fa fa-question"></i></a>
 				<a class="user-action-button" href="#"><i class="fa fa-search"></i></a>
 				<a class="user-action-button add-button" href="#"><i class="fa fa-plus"></i></a>
-				<a class="user-action-button" href="#"><i class="fa fa-bell-o"></i></a>
+				<!-- These alway show on header -->
+				<a class="user-action-button" href="#" id="notification-toggle">
+					<i class="fa fa-bell-o"></i>
+				</a>
+					<div id="notifications">
+						<div class="noti-header"> Notifications </div>
+						<div class="noti-content">
+							
+						</div>
+					</div>
 				<a class="user-action-button user-avatar" href="#"> <img src="{{ $user->avatar }}"> </a>
 				<div class="user-name">{{ $user->name }}</div>
 			</div>
@@ -171,6 +183,44 @@
 					content.fadeIn();
 				});
 			}
+
+			function getNotifications(){
+				$.post( "/admin/notifications/get", { _token: '{{ csrf_token() }}' } , function(data) {
+					$('.noti-content').html(data);
+					$.post( "/admin/notifications/update", { _token: '{{ csrf_token() }}' } , function(data) {
+						checkUnseen();
+					});
+				});
+
+				return 'success';
+			}
+
+			function checkUnseen(){
+				$.post( "/admin/notifications/unseen", { _token: '{{ csrf_token() }}' } , function(data) {
+					console.log(data);
+					if(data != 0){
+						$('#notification-toggle').addClass('unseen-notification');
+					} else {
+						$('#notification-toggle').removeClass('unseen-notification');
+					}
+				});
+			}
+
+			setInterval(checkUnseen, 10000);
+
+			checkUnseen();
+
+			//Notification toggle 
+			$('#notification-toggle').click(function(){
+				if($('#notifications').is(':hidden')){
+					getNotifications();
+					$('#notifications').show();
+
+				} else {
+					$('#notifications').hide();
+				}
+				return false;
+			});
 		});
 
 		$(document).ready(function(){

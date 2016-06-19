@@ -7,6 +7,7 @@ use Intervention\Image\ImageManager;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Image;
+use Auth;
 
 use App\Http\Requests;
 
@@ -79,10 +80,21 @@ class AdminController extends Controller
     }
 
     //Tickets
-    public function getTickets(){
+    public function getTickets($id = 0){
     	$tickets = \App\Ticket::orderBy('status')->get();
 
-    	return view('admin/tickets')->with('tickets', $tickets);
+        if($id){
+            $loadTicket = $id;
+        }
+        else {
+            if($tickets){
+                $loadTicket = \App\Ticket::get()->first()->id;
+            } else {
+                $loadTicket = 0;
+            }
+        }
+
+    	return view('admin/tickets')->with('tickets', $tickets)->with('loadTicket', $loadTicket);
     }
 
     public function getTicket($id){
@@ -122,8 +134,65 @@ class AdminController extends Controller
     		$comment->comment = $_POST['message'];
     		$comment->save();
 
+            $assigned = \App\Ticket::find($id);
+            if($assigned){
+                ( new \App\NotificationService(
+                    '@user_'.$_POST['userId'].' added a comment to your @ticket_'.$id.' ticket. "<i>'.$comment->comment.'</i>"', 
+                    $assigned->assigned_user_id,
+                    'fa-comment-o',
+                    'hex-blue'
+                ))->newNotification();
+            }    
+
     		return view('admin.pages.singlecomment')->with('comment', $comment);
     	}
     	return false;
+    }
+
+
+    public function getNotifications(){
+        $notifications = Auth::user()->notifications;
+
+        return view('admin.pages.notifications')->with('notifications', $notifications);
+    }
+
+    public function getUnseen(){
+        return Auth::user()->unseenNotifications->count();
+    }
+
+    public function updateNotifications(){
+        $notifications = Auth::user()->unseenNotifications;
+
+        foreach($notifications as $notification){
+            $notification->seen = 1;
+            $notification->save();
+        }
+
+        return 'success';
+    }
+
+    public function getUserToAssign($id){
+        $admins = \App\User::where('access', '=', 1)->orderBy('name')->get();
+
+        return view('admin.pages.usersToAssign')->with('admins', $admins)->with('ticketId', $id);
+    }
+
+    public function assignUser($ticketId, $userId){
+        $ticket = \App\Ticket::find($ticketId);
+
+        $actionUser = Auth::user()->id;
+
+        $ticket->assigned_user_id = $userId;
+        $ticket->save();
+
+        ( new \App\NotificationService(
+            '@user_'.$actionUser.' assigned you to  @ticket_'.$ticketId.' ticket.', 
+            $userId,
+            'fa-link',
+            'hex-pink'
+        ))->newNotification();
+
+        session()->flash('flash_success', 'User assigned to ticket!');
+        return redirect('/admin/tickets/'.$ticketId);
     }
 }

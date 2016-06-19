@@ -31,4 +31,12 @@ class User extends Authenticatable
     public function ticketComments(){
         return $this->hasMany('\App\TicketComment');
     }
+
+    public function notifications(){
+        return $this->hasMany('\App\Notification')->orderBy('seen')->orderBy('id', 'DESC')->limit(10);
+    }
+
+    public function unseenNotifications(){
+        return $this->hasMany('\App\Notification')->where('seen','=', 0);
+    }
 }

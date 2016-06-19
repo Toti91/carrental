@@ -8,7 +8,7 @@
 			</div>
 		@else 
 			<div class="ticket-assigned-user">
-				<a href="/admin/ticket/assign/{{ $ticket->id }}">Assing ticket to user <i class="fa fa-link"></i></a>
+				<a href="/admin/tickets/assign/{{ $ticket->id }}">Assing ticket to user <i class="fa fa-link"></i></a>
 			</div>
 		@endif
 		<div class="ticket-actions">

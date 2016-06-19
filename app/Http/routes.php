@@ -36,12 +36,19 @@ Route::group(['middleware' => 'admin'], function () {
 		Route::post('/admin/cars/new', 'AdminController@createCar');
 
 	//Admin tickets
-	Route::get('/admin/tickets', 'AdminController@getTickets');
+	Route::get('/admin/tickets/{id?}', 'AdminController@getTickets');
 		//Admin new ticket
 		Route::post('/admin/tickets/new', 'AdminController@createTicket');
+		Route::get('/admin/tickets/assign/{id}', 'AdminController@getUserToAssign');
+		Route::get('/admin/tickets/assigned/{ticketId}/{userId}', 'AdminController@assignUser');
 		//Admin get single ticket w. AJAX
 		Route::post('/admin/ticket/{id}', 'AdminController@getTicket');
 		Route::post('/admin/ticket/newcomment/{id}', 'AdminController@addComment');
 
 	Route::get('/admin/users', 'AdminController@getUsers');
+
+	//Admin notifications
+	Route::post('admin/notifications/get', 'AdminController@getNotifications');
+	Route::post('admin/notifications/unseen', 'AdminController@getUnseen');
+	Route::post('admin/notifications/update', 'AdminController@updateNotifications');
 });

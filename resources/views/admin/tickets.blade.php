@@ -30,15 +30,6 @@
 
 @section('container')
 	<div class="content content-4">
-		<?PHP 
-			$i = 1;
-			if(\App\Ticket::orderBy('status')->first()){
-				$firstTicketId = \App\Ticket::orderBy('status')->first()->id;
-			}
-			else {
-				$firstTicketId = 0;
-			}
-		?>
 		@foreach($tickets as $ticket)
 			<?php 
 				$user = \App\User::where('email', '=', $ticket->email)->first(); 
@@ -57,7 +48,7 @@
 				}
 
 			?>
-			<a href="#" class="ticket-link @if($i == 1) si-active @endif " ticketId="{{ $ticket->id }}">
+			<a href="#" class="ticket-link" ticketId="{{ $ticket->id }}">
 				<div class="single-item {{ $class }}">
 					<div class="si-icon"> 
 						@if($user)
@@ -75,7 +66,6 @@
 					<div class="clear"></div>
 				</div>
 			</a>
-			<?PHP $i++; ?>
 		@endforeach
 	</div>
 	<div class="content content-6">
@@ -91,9 +81,6 @@
 			var links = $('.ticket-link');
 
 			links.click(function(){
-				links.removeClass('si-active');
-				$(this).addClass('si-active');
-
 				var ticketId = ($(this).attr('ticketId'));
 				loadTicket(ticketId);
 
@@ -102,7 +89,12 @@
 
 
 			function loadTicket(id){
-				var container = $('.ticket-content');
+				var container = $('.ticket-content'),
+					links = $('.ticket-link');
+
+				links.removeClass('si-active');
+				$('a[ticketId="'+id+'"]').addClass('si-active');
+
 				$.post( "/admin/ticket/"+id, { _token: '{{ csrf_token() }}' } , function(data) {
 	               	container.fadeOut(function(){
 	               		container.html(data).fadeIn();
@@ -124,7 +116,7 @@
 	            });
 			}
 
-			loadTicket({{ $firstTicketId }});
+			loadTicket({{ $loadTicket }});
 		});
 	</script>
 @stop

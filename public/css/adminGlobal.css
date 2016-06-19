@@ -409,6 +409,115 @@ td,
 th {
   padding: 0;
 }
+#notifications {
+  display: none;
+  float: right;
+  position: absolute;
+  top: 50px;
+  right: 20px;
+  background: #fff;
+  width: 330px;
+  height: 420px;
+  border: 1px solid #ededed;
+  box-shadow: 3px 3px 3px #ededed;
+}
+#notifications small {
+  float: left;
+  width: 100%;
+  color: #888;
+  font-style: italic;
+  text-align: center;
+}
+#notifications .noti-header {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #ededed;
+  line-height: 30px;
+  text-indent: 10px;
+  color: #666;
+  font-weight: 300;
+}
+#notifications .noti-content {
+  width: 100%;
+  height: 390px;
+  overflow: auto;
+}
+#notifications .single-notification {
+  padding: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ededed;
+  min-height: 75px;
+}
+#notifications .single-notification p {
+  font-size: 13px;
+  color: #666;
+  line-height: 20px;
+}
+#notifications .single-notification p a {
+  color: #ed5565;
+  text-decoration: none;
+}
+#notifications .single-notification p a:hover {
+  color: #222;
+}
+#notifications .single-notification .noti-icon {
+  float: left;
+  margin-right: 5px;
+  height: 60px;
+  width: 60px;
+}
+#notifications .noti-unseen {
+  background: #e9f3f7;
+}
+.hexagon {
+  position: relative;
+  width: 50px;
+  height: 28.87px;
+  background-color: #0ca2df;
+  margin: 14.43px 0;
+}
+.hexagon i {
+  position: absolute;
+  top: 2px;
+  left: 14px;
+  color: #fff;
+  font-size: 25px;
+}
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+}
+.hexagon:before {
+  bottom: 100%;
+  border-bottom: 14.43px solid #0ca2df;
+}
+.hexagon:after {
+  top: 100%;
+  width: 0;
+  border-top: 14.43px solid #0ca2df;
+}
+.hex-blue {
+  background-color: #0ca2df !important;
+}
+.hex-blue:before {
+  border-bottom: 14.43px solid #0ca2df !important;
+}
+.hex-blue:after {
+  border-top: 14.43px solid #0ca2df !important;
+}
+.hex-pink {
+  background-color: #ed5565 !important;
+}
+.hex-pink:before {
+  border-bottom: 14.43px solid #ed5565 !important;
+}
+.hex-pink:after {
+  border-top: 14.43px solid #ed5565 !important;
+}
 #sidebar {
   width: 220px;
   float: left;
@@ -604,7 +713,6 @@ ul#sidebar-nav li.active {
 #info-bar .user-section {
   float: right;
   margin-top: 5px;
-  opacity: 0.8;
 }
 #info-bar .user-action-button {
   float: right;
@@ -633,6 +741,12 @@ ul#sidebar-nav li.active {
 }
 #info-bar .user-action-button:hover img {
   opacity: 1;
+}
+#info-bar .unseen-notification {
+  background: rgba(237, 85, 101, 0.8);
+}
+#info-bar .unseen-notification i {
+  color: #ededed;
 }
 #info-bar .user-name {
   float: right;
@@ -860,6 +974,31 @@ a.si-active > .single-item {
 #ticket .new-comment {
   margin-top: 10px;
 }
+.single-admin {
+  width: 20%;
+  float: left;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.single-admin .sa-avatar {
+  margin: 0 auto;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+.single-admin .sa-name {
+  width: 90%;
+  margin: 0 auto;
+  color: #666;
+  font-weight: 300;
+  text-align: center;
+}
+.single-admin:hover {
+  background: #f9f9f9;
+}
 .input-default {
   width: 100%;
   height: 40px;
@@ -895,8 +1034,4 @@ a.si-active > .single-item {
 input[type=text],
 input[type=number] {
   text-indent: 10px;
-}
-
-.si-email{
-  position: relative;
 }
