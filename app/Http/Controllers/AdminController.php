@@ -15,7 +15,9 @@ class AdminController extends Controller
 {
 	// Admin frontpage
     public function getIndex(){
-    	return view('admin/index');
+    	$users = \App\User::get();
+    	$cars = \App\Car::get();
+    	return view('admin/index')->with('users', $users)->with('cars', $cars);
     }
 
     //Admin cars page
