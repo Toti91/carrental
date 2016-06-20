@@ -187,6 +187,7 @@ class AdminController extends Controller
             $ticket->save();
 
             session()->flash('flash_success', 'Ticket edited!');
+            
             return redirect('/admin/tickets/'.$_POST['ticket-id']);
         }
 
