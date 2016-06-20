@@ -858,6 +858,13 @@ a.si-active > .single-item {
   border-top: 1px solid #ededed;
   border-bottom: 1px solid #ededed;
 }
+.ticket-error {
+  width: 100%;
+  margin: 10px 0;
+  text-align: center;
+  color: #888;
+  font-weight: 300;
+}
 #ticket {
   width: 100%;
   box-sizing: border-box;
@@ -974,6 +981,33 @@ a.si-active > .single-item {
 #ticket .new-comment {
   margin-top: 10px;
 }
+#ticket .ticket-priority {
+  float: right;
+}
+#ticket .statusButton {
+  display: block;
+  background: #ededed;
+  color: #222;
+  text-decoration: none;
+  border-right: 1px solid #cdcdcd;
+  float: left;
+  padding: 3px;
+  font-size: 13px;
+  font-weight: 300;
+}
+#ticket .statusButton:first-child {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+#ticket .statusButton:last-child {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border: none;
+}
+#ticket .statusButton:hover,
+#ticket .active {
+  background: #ccc;
+}
 .single-admin {
   width: 20%;
   float: left;
@@ -1032,6 +1066,7 @@ a.si-active > .single-item {
   color: #fff;
 }
 input[type=text],
-input[type=number] {
+input[type=number],
+input[type=email] {
   text-indent: 10px;
 }

@@ -293,6 +293,13 @@
 }
 
 // Single ticket
+.ticket-error {
+	width:100%;
+	margin:10px 0;
+	text-align: center;
+	color:#888;
+	font-weight: 300;
+}
 #ticket {
 	width:100%;
 	box-sizing: border-box;
@@ -410,6 +417,32 @@
 	}
 	.new-comment {
 		margin-top:10px;
+	}
+	.ticket-priority {
+		float:right;
+	}
+	.statusButton {
+		display:block;
+		background:#ededed;
+		color:#222;
+		text-decoration:none;
+		border-right:1px solid #cdcdcd;
+		float:left;
+		padding:3px;
+		font-size:13px;
+		font-weight:300;
+	}
+	.statusButton:first-child {
+		border-top-left-radius: 3px;
+		border-bottom-left-radius: 3px;
+	}
+	.statusButton:last-child {
+		border-top-right-radius: 3px;
+		border-bottom-right-radius: 3px;
+		border:none;
+	}
+	.statusButton:hover, .active {
+		background:#ccc;
 	}
 }
 

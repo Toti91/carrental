@@ -45,12 +45,14 @@ class NotificationService
                     switch ($array[0]) {
                     case 'user':
                         $instance_user = \App\User::find($array[1]);
-                        $url = '<a href="/admin/user/'.$array[1].'">'.$instance_user->name.'</a>';
+                        if($instance_user){ $subject = $instance_user->name; } else { $subject = "<i>User not found</i>"; }
+                        $url = '<a href="/admin/user/'.$array[1].'">'.$subject.'</a>';
                         $new_notification = str_replace('@'.$instance, $url, $new_notification);
                         break;
                     case 'ticket':
                         $instance_ticket = \App\Ticket::find($array[1]);
-                        $url = '<a href="/admin/tickets/'.$array[1].'">'.$instance_ticket->subject.'</a>';
+                        if($instance_ticket){ $subject = $instance_ticket->subject; } else { $subject = "<i>Ticket not found</i>"; }
+                        $url = '<a href="/admin/tickets/'.$array[1].'">'.$subject.'</a>';
                         $new_notification = str_replace('@'.$instance, $url, $new_notification);
                         break;
                     default:

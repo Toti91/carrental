@@ -39,8 +39,13 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::get('/admin/tickets/{id?}', 'AdminController@getTickets');
 		//Admin new ticket
 		Route::post('/admin/tickets/new', 'AdminController@createTicket');
+		Route::get('/admin/tickets/edit/{id}', 'AdminController@getEditTicket');
+		Route::get('/admin/tickets/remove/{id}', 'AdminController@getRemoveTicket');
+		Route::post('/admin/tickets/edit', 'AdminController@editTicket');
+		Route::post('/admin/tickets/remove', 'AdminController@removeTicket');
 		Route::get('/admin/tickets/assign/{id}', 'AdminController@getUserToAssign');
 		Route::get('/admin/tickets/assigned/{ticketId}/{userId}', 'AdminController@assignUser');
+		Route::get('/admin/tickets/setstatus/{ticketId}/{status}', 'AdminController@changeTicketStatus');
 		//Admin get single ticket w. AJAX
 		Route::post('/admin/ticket/{id}', 'AdminController@getTicket');
 		Route::post('/admin/ticket/newcomment/{id}', 'AdminController@addComment');

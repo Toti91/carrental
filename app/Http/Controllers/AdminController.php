@@ -88,7 +88,7 @@ class AdminController extends Controller
         }
         else {
             if($tickets){
-                $loadTicket = \App\Ticket::get()->first()->id;
+                $loadTicket = \App\Ticket::orderBy('status')->get()->first()->id;
             } else {
                 $loadTicket = 0;
             }
@@ -99,13 +99,17 @@ class AdminController extends Controller
 
     public function getTicket($id){
     	$ticket = \App\Ticket::find($id);
-    	$comments = $ticket->comments;
-    	$assigned = null;
-    	if($ticket->user){
-    		$assigned = $ticket->user;
-    	}
+        if($ticket){
+            $comments = $ticket->comments;
+            $assigned = null;
+        	if($ticket->user){
+        		$assigned = $ticket->user;
+        	}
 
-    	return view('admin.pages.ticket')->with('ticket', $ticket)->with('comments', $comments)->with('assigned', $assigned);
+        	return view('admin.pages.ticket')->with('ticket', $ticket)->with('comments', $comments)->with('assigned', $assigned);
+        }
+
+        return '<div class="ticket-error">Ticket not found!</div>';
     }
 
     public function createTicket(){
@@ -124,6 +128,89 @@ class AdminController extends Controller
 
     	session()->flash('flash_error', 'Form filled out incorrectly!');
     	return redirect('/admin/tickets');
+    }
+
+    public function getEditTicket($id){
+        $ticket = \App\Ticket::find($id);
+
+        $admins = \App\User::where('access', '=', 1)->orderBy('name')->get();
+
+        if($ticket){
+           return view('admin.edit.ticket')->with('ticket', $ticket)->with('admins', $admins);
+        }
+
+        session()->flash('flash_error', 'Ticket not found!');
+        return redirect('/admin/tickets');
+    }
+
+    public function getRemoveTicket($id){
+        $ticket = \App\Ticket::find($id);
+
+        $comments = $ticket->comments;
+
+        if($ticket){
+           return view('admin.remove.ticket')->with('ticket', $ticket)->with('comments', $comments);
+        }
+
+        session()->flash('flash_error', 'Ticket not found!');
+        return redirect('/admin/tickets');
+    }
+
+    public function editTicket(){
+        $ticket = \App\Ticket::find($_POST['ticket-id']);
+
+        if($ticket){
+            $user_id = $ticket->assigned_user_id;
+            if($user_id != $_POST['assigned-user']){
+                ( new \App\NotificationService(
+                    '@user_'.Auth::user()->id.' unassigned you from @ticket_'.$_POST['ticket-id'].' ticket.', 
+                    $user_id,
+                    'fa-chain-broken',
+                    'hex-pink'
+                ))->newNotification();
+
+                $ticket->assigned_user_id = $_POST['assigned-user'];
+
+                ( new \App\NotificationService(
+                    '@user_'.Auth::user()->id.' assigned you to  @ticket_'.$_POST['ticket-id'].' ticket.', 
+                    $_POST['assigned-user'],
+                    'fa-link',
+                    'hex-pink'
+                ))->newNotification();
+            }
+
+            $ticket->email = $_POST['email'];
+            $ticket->subject = $_POST['subject'];
+            $ticket->description = $_POST['description'];
+            $ticket->save();
+
+            session()->flash('flash_success', 'Ticket edited!');
+            return redirect('/admin/tickets/'.$_POST['ticket-id']);
+        }
+
+        session()->flash('flash_error', 'Ticket not found!');
+        return redirect('/admin/tickets');
+    }
+
+    public function removeTicket(){
+        $ticket = \App\Ticket::find($_POST['ticket-id']);
+
+        $comments = $ticket->comments;
+
+        if($ticket){
+            foreach($comments as $comment){
+                $comment->delete();
+            }
+
+            $ticket->delete();
+
+            session()->flash('flash_success', 'Ticket deleted!');
+            return redirect('/admin/tickets');
+        }
+
+        session()->flash('flash_error', 'Ticket not found!');
+        return redirect('/admin/tickets');
+
     }
 
     public function addComment($id){
@@ -193,6 +280,15 @@ class AdminController extends Controller
         ))->newNotification();
 
         session()->flash('flash_success', 'User assigned to ticket!');
+        return redirect('/admin/tickets/'.$ticketId);
+    }
+
+    public function changeTicketStatus($ticketId, $status) {
+        $ticket = \App\Ticket::find($ticketId);
+        $ticket->status = $status;
+        $ticket->save();
+
+        session()->flash('flash_success', 'Ticket status changed!');
         return redirect('/admin/tickets/'.$ticketId);
     }
 }

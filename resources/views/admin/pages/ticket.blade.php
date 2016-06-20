@@ -12,11 +12,17 @@
 			</div>
 		@endif
 		<div class="ticket-actions">
-			<a href="/admin/ticket/edit/{{ $ticket->id }}"><i class="fa fa-edit"></i> Edit</a> <br>
-			<a href="/admin/ticket/remove/{{ $ticket->id }}"><i class="fa fa-remove"></i> Remove</a>
+			<a href="/admin/tickets/edit/{{ $ticket->id }}"><i class="fa fa-edit"></i> Edit</a> <br>
+			<a href="/admin/tickets/remove/{{ $ticket->id }}"><i class="fa fa-remove"></i> Remove</a>
 		</div>
 	</div>
 	<div class="ticket-subject">
+		<div class="ticket-priority">
+			<a href="/admin/tickets/setstatus/{{ $ticket->id }}/1" class="@if($ticket->status == 1) active @endif  statusButton">High</a> 
+			<a href="/admin/tickets/setstatus/{{ $ticket->id }}/2" class="@if($ticket->status == 2) active @endif  statusButton">Medium</a> 
+			<a href="/admin/tickets/setstatus/{{ $ticket->id }}/3" class="@if($ticket->status == 3) active @endif  statusButton">Low</a> 
+			<a href="/admin/tickets/setstatus/{{ $ticket->id }}/4" class="@if($ticket->status == 4) active @endif  statusButton">Finished</a> 
+		</div>
 		<h3> {{ $ticket->subject }} </h3>
 	</div>
 	<div class="ticket-message">
