@@ -56,4 +56,8 @@ Route::group(['middleware' => 'admin'], function () {
 	Route::post('admin/notifications/get', 'AdminController@getNotifications');
 	Route::post('admin/notifications/unseen', 'AdminController@getUnseen');
 	Route::post('admin/notifications/update', 'AdminController@updateNotifications');
+
+	//Admin Settings
+	Route::get('admin/settings', 'AdminController@getSettings');
+	Route::post('admin/settings/change', 'AdminController@changeSetting');
 });

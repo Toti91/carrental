@@ -1026,12 +1026,52 @@ a.si-active > .single-item {
 .single-admin .sa-name {
   width: 90%;
   margin: 0 auto;
-  color: 666#;
+  color: #666;
   font-weight: 300;
   text-align: center;
 }
 .single-admin:hover {
   background: #f9f9f9;
+}
+ul#settings-nav {
+  width: 100%;
+}
+ul#settings-nav li {
+  list-style: none;
+  display: block;
+  height: 35px;
+  font-weight: 300;
+  color: #888;
+  text-indent: 6px;
+  line-height: 35px;
+}
+ul#settings-nav li:hover,
+ul#settings-nav a.active li {
+  background: #f9f9f9;
+  color: #666;
+}
+ul#settings-nav a {
+  text-decoration: none;
+}
+.single-setting {
+  height: 50px;
+  padding: 0 5px;
+  border-bottom: 1px solid #ededed;
+  color: #666;
+  font-weight: 300;
+}
+.setting-name {
+  width: 60%;
+  float: left;
+  color: #666;
+  font-weight: 300;
+  height: 40px;
+  line-height: 40px;
+}
+.setting-input {
+  border: 1px solid #ededed;
+  height: 40px;
+  border-radius: 4px;
 }
 .input-default {
   width: 100%;
@@ -1070,17 +1110,3 @@ input[type=number],
 input[type=email] {
   text-indent: 10px;
 }
-
-.stats-table{
-  width: 100%;
-  margin-top: 3%;
-}
-
-.stats-table td{
-  font-weight: 900;
-  font-size: 32px;
-  color: #666;
-  text-align: center;
-}
-
-

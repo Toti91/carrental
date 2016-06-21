@@ -66,6 +66,9 @@
 				<a href="/admin/tickets"><li @if($active == 'tickets') class="active" @endif>
 					<i class="fa fa-ticket"></i> <div class="wide-sidebar"> Tickets </div>
 				</li></a>
+				<a href="/admin/settings"><li @if($active == 'settings') class="active" @endif>
+					<i class="fa fa-cog"></i> <div class="wide-sidebar"> Settings </div>
+				</li></a>
 			</ul>
 		</div>
 	</div>

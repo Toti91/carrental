@@ -32,6 +32,25 @@ class AdminController extends Controller
     	return view('admin/users')->with('users', $users);
     }
 
+    public function getSettings(){
+        $settings = \App\Setting::get();
+        return view('admin/settings')->with('settings', $settings);
+    }
+
+    public function changeSetting(){
+        $setting = \App\Setting::where('setting_name', '=', $_POST['setting'])->first();
+        if($setting){
+            $setting->setting = $_POST['setting_value'];
+            $setting->save();
+
+            session()->flash('flash_success', $_POST['setting'] . ' changed!');
+            return redirect('/admin/settings');
+        }
+
+        session()->flash('flash_error', 'Setting not found!');
+        return redirect('/admin/settings');
+    }
+
     public function createCategory(){
     	if($_POST['name'] && $_POST['price-min'] && $_POST['price-max']){
 	    	$cat = new \App\Category;
