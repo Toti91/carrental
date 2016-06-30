@@ -43,36 +43,38 @@
 		@endif
 	</header>
 	<div id="wrapper">
-		<div id="rental-bar">
-			<div class="rental-info">
-				<div class="rental-icon">
-					<img src="/useruploads/rentals/{{ $rental->icon }}">
+		@if(empty($hidenav))
+			<div id="rental-bar">
+				<div class="rental-info">
+					<div class="rental-icon">
+						<img src="/useruploads/rentals/{{ $rental->icon }}">
+					</div>
+					<div class="rental-name">
+						{{ $rental->name }} <a href="/rental/settings"><i class="fa fa-cog"></i></a>
+					</div>
 				</div>
-				<div class="rental-name">
-					{{ $rental->name }} <a href="/rental/settings"><i class="fa fa-cog"></i></a>
+				<div class="rental-status">
+					<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Account">
+						<small>$</small>{{ number_format($rental->money, 0, ',', '.') }}
+					</div>
+				</div>
+				<div class="rental-status">
+					<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Stock value">
+						<small>$</small>{{ number_format(750, 0, ',', '.') }}
+					</div>
+				</div>
+				<div class="rental-status">
+					<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Parked cars">
+						<small><i class="fa fa-plug"></i></small>{{ number_format(34, 0, ',', '.') }}
+					</div>
+				</div>
+				<div class="rental-status">
+					<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Owned cars">
+						<small><i class="fa fa-car"></i></small>{{ number_format(235, 0, ',', '.') }}
+					</div>
 				</div>
 			</div>
-			<div class="rental-status">
-				<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Account">
-					<small>$</small>{{ number_format($rental->money, 0, ',', '.') }}
-				</div>
-			</div>
-			<div class="rental-status">
-				<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Stock value">
-					<small>$</small>{{ number_format(750, 0, ',', '.') }}
-				</div>
-			</div>
-			<div class="rental-status">
-				<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Parked cars">
-					<small><i class="fa fa-plug"></i></small>{{ number_format(34, 0, ',', '.') }}
-				</div>
-			</div>
-			<div class="rental-status">
-				<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Owned cars">
-					<small><i class="fa fa-car"></i></small>{{ number_format(235, 0, ',', '.') }}
-				</div>
-			</div>
-		</div>
+		@endif
 	    <div id="content" style="min-height:800px;">
 	   		@yield('content')
 	    </div>
