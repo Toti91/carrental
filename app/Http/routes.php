@@ -1,5 +1,10 @@
 <?php
 
+use Intervention\Image\ImageManager;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -11,14 +16,51 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'SiteController@landingPage');
 
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/makeAdmin/{id}', 'HomeController@makeAdmin');
+
+// NEW CAR RENTAL HANDLING
+Route::get('/create', function(){
+	if(Auth::user()->rental){
+		return redirect('/home');
+	}
+	return view('create');
+});
+Route::post('/create', function(){
+	if($_POST['name']){
+		$starting_money = \App\Setting::where('setting_name', '=', 'starting_money')->first();
+		$rental = new \App\Rental;
+		$rental->user_id = Auth::user()->id;
+		$rental->name = $_POST['name'];
+		$rental->money = $starting_money->setting;
+		//Image upload
+    	if($_FILES['image']['size'] > 1000000){
+    		
+    		throw new RuntimeException('Exceeded filesize limit');
+    	}
+    	else{
+
+    		$image = $_FILES['image']['tmp_name'];
+    		if($image){
+	    		$filename = time() . '_'.$_FILES['image']['name'].'.' . Input::file('image')->getClientOriginalExtension();
+	   			$path = public_path('useruploads/rentals/' . $filename);
+				Image::make(Input::file('image')->getRealPath())->fit(400, 400)->save($path);
+	    		$rental->icon = $filename;
+	    	} else {
+	    		$rental->icon = 'placeholder.png';
+	    	}
+    	}
+    	$rental->tutorial = 1;
+    	$rental->save();
+
+    	return redirect('/home');
+	}
+});
+/////////////////////////
 
 //Socialite reidrects
 Route::get('/redirect', 'SocialAuthController@redirect');

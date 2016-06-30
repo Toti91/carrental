@@ -55,18 +55,23 @@
 		<div class="siebar-nav">
 			<ul id="sidebar-nav">
 				<a href="/admin"><li @if($active == 'index') class="active" @endif>
+					@if($active == 'index') <div class="triangle"></div> @endif
 					<i class="fa fa-dashboard"></i> <div class="wide-sidebar"> Dashboard </div>
 				</li></a>
 				<a href="/admin/cars"><li @if($active == 'cars') class="active" @endif>
+					@if($active == 'cars') <div class="triangle"></div> @endif
 					<i class="fa fa-car"></i> <div class="wide-sidebar"> Cars </div>
 				</li></a>
 				<a href="/admin/users"><li @if($active == 'users') class="active" @endif>
+					@if($active == 'users') <div class="triangle"></div> @endif
 					<i class="fa fa-users"></i> <div class="wide-sidebar"> Users </div>
 				</li></a>
 				<a href="/admin/tickets"><li @if($active == 'tickets') class="active" @endif>
+					@if($active == 'tickets') <div class="triangle"></div> @endif
 					<i class="fa fa-ticket"></i> <div class="wide-sidebar"> Tickets </div>
 				</li></a>
 				<a href="/admin/settings"><li @if($active == 'settings') class="active" @endif>
+					@if($active == 'settings') <div class="triangle"></div> @endif
 					<i class="fa fa-cog"></i> <div class="wide-sidebar"> Settings </div>
 				</li></a>
 			</ul>
@@ -103,7 +108,6 @@
 		<div id="title-bar">
 			@yield('title-bar') 
 		</div>
-
 		@yield('container')
 	</div>
 

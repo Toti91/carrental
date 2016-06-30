@@ -39,4 +39,8 @@ class User extends Authenticatable
     public function unseenNotifications(){
         return $this->hasMany('\App\Notification')->where('seen','=', 0);
     }
+
+    public function rental(){
+        return $this->hasOne('\App\Rental', 'user_id');
+    }
 }

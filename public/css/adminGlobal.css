@@ -566,6 +566,14 @@ ul#sidebar-nav li i {
 ul#sidebar-nav li .wide-sidebar {
   float: left;
 }
+ul#sidebar-nav li .triangle {
+  float: right;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 17.5px 15px 17.5px 0;
+  border-color: transparent #ffffff transparent transparent;
+}
 ul#sidebar-nav li:hover,
 ul#sidebar-nav li.active {
   color: #ededed;
@@ -1068,11 +1076,6 @@ ul#settings-nav a {
   height: 40px;
   line-height: 40px;
 }
-.setting-input {
-  border: 1px solid #ededed;
-  height: 40px;
-  border-radius: 4px;
-}
 .input-default {
   width: 100%;
   height: 40px;
@@ -1109,4 +1112,10 @@ input[type=text],
 input[type=number],
 input[type=email] {
   text-indent: 10px;
+}
+.setting-input {
+  border: 1px solid #ededed;
+  height: 40px;
+  border-radius: 4px;
+  margin-top: 5px;
 }

@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.front')
+
+@section('title')
+    Car Rental Manager
+@stop
 
 @section('content')
 <div class="container">
@@ -8,7 +12,9 @@
                 <div class="panel-heading">Welcome</div>
 
                 <div class="panel-body">
-                    Your Application's Landing Page.
+                    Your Application's Landing Page. <br>
+                    <a href="/login">Login</a><br>
+                    <a href="/register">Register</a>
                 </div>
             </div>
         </div>

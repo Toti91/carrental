@@ -25,6 +25,10 @@ class Authenticate
             }
         }
 
+        if(!Auth::user()->rental) {
+            return redirect('/create');
+        }
+
         return $next($request);
     }
 }

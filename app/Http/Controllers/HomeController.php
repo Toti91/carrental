@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -25,7 +26,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $rental = Auth::user()->rental;
+        return view('home')->with('rental', $rental);
+    }
+
+    public function newRental(){
+        return view('create');
     }
 
     public function makeAdmin($id)
@@ -34,6 +40,6 @@ class HomeController extends Controller
         $user->access = 1;
         $user->save();
 
-        return redirect('/');
+        return redirect('/admin');
     }
 }

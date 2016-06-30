@@ -22,7 +22,7 @@
 	<div class="content content-6">
 		@foreach($users as $user)
 				<div class="single-item">
-				<div class="si-icon"> <img src="{{ Auth::user()->avatar }}"> </div>
+				<div class="si-icon"> <img src="{{ $user->avatar }}"> </div>
 				<div class="si-top">
 					<div class="si-name"> {{ $user->name }} </div> 
 				</div>
