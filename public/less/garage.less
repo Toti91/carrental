@@ -1,0 +1,79 @@
+table#garage {
+	width:100%;
+	margin:20px 0 0 0;
+	tr {
+		height:50px;
+		border-bottom:1px solid #ededed;
+		td.car-image {
+			height:50px;
+			width:50px;
+			padding:0px;
+			box-sizing: border-box;
+			border-radius:0;
+			img {
+				height:50px;
+				padding:5px;
+			}
+		}
+
+		td.car-popularity, td.car-category, td.car-hours {
+			color:#666;
+			width:50px;
+			font-weight:300;
+			text-align: center;
+		}
+		td.car-name {
+			font-weight:300;
+			color:#444;
+			i {
+				color:#888;
+				font-size:14px;
+			}
+			small {
+				color:#2196f3;
+				padding-left:10px;
+			}
+		}
+		td.car-price {
+			color:green;
+			font-weight:300;
+		}
+		td.car-maintenance {
+			text-align: center;
+			width:50px;
+			color:#888;
+			font-size:13px;
+			a {
+				color:#2196f3;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+		}
+		td.car-parked {
+			width:120px;
+			text-align: center;
+			color:#888;
+			font-size:12px;
+			i {
+				color:#666;
+				font-size:13px;
+			}
+		}
+		td.single-car:hover {
+			color:#7abcff;
+			cursor: pointer;
+		}
+
+		th {
+			color:#444;
+		}
+	}
+	tr:first-child {
+		border-top:1px solid #ededed;
+	}
+
+	tr:hover {
+		background:#f8f8f8;
+	}
+}

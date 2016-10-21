@@ -20,6 +20,23 @@
 
 </head>
 <body id="app-layout">
+	<!-- Flash messages -->
+	@if(session()->has('flash_success'))
+		<div class="alert success-alert">
+			{{ session()->get('flash_success') }}
+		</div>
+	@endif
+	@if(session()->has('flash_error'))
+		<div class="alert error-alert">
+			{{ session()->get('flash_error') }}
+		</div>
+	@endif
+	@if(session()->has('flash_info'))
+		<div class="alert info-alert">
+			{{ session()->get('flash_info') }}
+		</div>
+	@endif
+	<div id="blackout"></div>
 	<header>
 		<div id="user-navbar">
 			<div class="un-avatar"> <img src="{{ Auth::user()->avatar }}"> </div>
@@ -35,9 +52,9 @@
 		@if(empty($hidenav))
 			<div id="navigation">
 				<ul>
-					<a href="#" class="active"><li>Dashbaord</li></a>
-					<a href="#"><li>Garage</li></a>
-					<a href="#"><li>Dealership</li></a>
+					<a href="/" @if($active_section == 'index') class="active"  @endif><li>Dashbaord</li></a>
+					<a href="/garage" @if($active_section == 'garage') class="active"  @endif><li>Garage</li></a>
+					<a href="/dealership" @if($active_section == 'dealership') class="active"  @endif><li>Dealership</li></a>
 				</ul>
 			</div>
 		@endif
@@ -60,22 +77,22 @@
 				</div>
 				<div class="rental-status">
 					<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Stock value">
-						<small>$</small>{{ number_format(750, 0, ',', '.') }}
+						<small>$</small>{{ number_format(750.23, 2, ',', '.') }}
 					</div>
 				</div>
 				<div class="rental-status">
 					<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Parked cars">
-						<small><i class="fa fa-plug"></i></small>{{ number_format(34, 0, ',', '.') }}
+						<small><i class="fa fa-plug"></i></small>{{ number_format(\App\userCar::countParked(), 0, ',', '.') }}
 					</div>
 				</div>
 				<div class="rental-status">
 					<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Owned cars">
-						<small><i class="fa fa-car"></i></small>{{ number_format(235, 0, ',', '.') }}
+						<small><i class="fa fa-car"></i></small>{{ number_format(\App\userCar::countTotal(), 0, ',', '.') }}
 					</div>
 				</div>
 			</div>
 		@endif
-	    <div id="content" style="min-height:800px;">
+	    <div id="content">
 	   		@yield('content')
 	    </div>
     </div>
@@ -83,7 +100,13 @@
    	$(document).ready(function(){
       	$('.parallax').parallax();
        	$('.tooltip').tooltip({delay: 50});
+
+       	// Alert / Flash messages
+		    if($('.alert').is(':visible')){
+		        $('.alert').delay(3000).fadeOut();
+		    }
     });
    </script>
+   @yield('script');
 </body>
 </html>

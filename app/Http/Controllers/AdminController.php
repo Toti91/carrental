@@ -73,7 +73,9 @@ class AdminController extends Controller
 	    	$car = new \App\Car;
 	    	$car->category_id = $_POST['category-id'];
 	    	$car->name = $_POST['name'];
-	    	$car->price = $_POST['price'];
+            $car->price = $_POST['price'];
+            $car->gamma = $_POST['gamma'];
+	    	$car->popularity = $_POST['popularity'];
 
 	    	//Image upload
 	    	if($_FILES['image']['size'] > 1000000){
@@ -84,8 +86,12 @@ class AdminController extends Controller
 
 	    		$image = $_FILES['image']['tmp_name'];
 	    		$filename = time() . '.' . Input::file('image')->getClientOriginalExtension();
-	   			$path = public_path('useruploads/' . $filename);
-				Image::make(Input::file('image')->getRealPath())->fit(200, 200)->save($path);
+                $path = public_path('useruploads/cars/' . $filename);
+	   			$iconPath = public_path('useruploads/cars/icon/' . $filename);
+                Image::make(Input::file('image')->getRealPath())->resize(200, null, function ($constraint) {
+                    $constraint->aspectRatio();
+                })->resizeCanvas(200,200)->save($iconPath);
+				Image::make(Input::file('image')->getRealPath())->save($path);
 	    		$car->image = $filename;
 	    	}
 
@@ -102,13 +108,14 @@ class AdminController extends Controller
 
     //Tickets
     public function getTickets($id = 0){
-    	$tickets = \App\Ticket::orderBy('status')->get();
+    	$ticketCount = \App\Ticket::orderBy('status')->count();
+        $tickets = \App\Ticket::orderBy('status')->get();
 
         if($id){
             $loadTicket = $id;
         }
         else {
-            if($tickets){
+            if($ticketCount){
                 $loadTicket = \App\Ticket::orderBy('status')->get()->first()->id;
             } else {
                 $loadTicket = 0;
@@ -312,5 +319,10 @@ class AdminController extends Controller
 
         session()->flash('flash_success', 'Ticket status changed!');
         return redirect('/admin/tickets/'.$ticketId);
+    }
+
+    public function getMalfunctions(){
+        $malfunctions = \App\Malfunction::get();
+        return view('admin/malfunctions')->with('malfunctions', $malfunctions);
     }
 }

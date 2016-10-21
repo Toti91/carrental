@@ -34,6 +34,17 @@ body {
   overflow: auto;
   padding-top: 80px;
 }
+#blackout {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 998;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+.disabledLink {
+  pointer-events: none;
+}
 .alert {
   position: fixed;
   top: 100px;
@@ -45,6 +56,7 @@ body {
   line-height: 30px;
   padding: 0 6px;
   font-weight: 300;
+  z-index: 999;
 }
 .success-alert {
   border-left: 3px solid #22d14b;
@@ -6927,7 +6939,7 @@ header {
   height: 80px;
   border-bottom: 1px solid #ededed;
   position: fixed;
-  z-index: 999;
+  z-index: 996;
   width: 100%;
   background: #fff;
 }
@@ -7102,4 +7114,323 @@ header .facebook-login {
 #rental-bar .rental-status .rs-section small {
   color: #888;
   margin-right: 2px;
+}
+#dealership {
+  margin: 15px 0 0 0;
+}
+.car-sale-window {
+  display: none;
+  width: 800px;
+  position: fixed;
+  left: 50%;
+  margin-left: -400px;
+  top: 120px;
+  z-index: 999;
+  background: #fff;
+  border-radius: 10px;
+}
+.car-sale-window i {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #666;
+}
+.car-sale-window i:hover {
+  color: #444;
+  cursor: pointer;
+}
+.car-sale-window .csw-content .csw-image {
+  float: left;
+  width: 65%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  position: relative;
+  padding: 50px 0;
+}
+.car-sale-window .csw-content .csw-image img {
+  width: 90%;
+  margin-left: 5%;
+}
+.car-sale-window .csw-content .csw-image .csw-popularity {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #f8f8f8;
+  border-radius: 5px;
+  color: #444;
+  font-weight: 300;
+  border: 1px solid #ededed;
+}
+.car-sale-window .csw-content .csw-image .csw-category {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  background: #f8f8f8;
+  border-radius: 5px;
+  color: #444;
+  font-weight: 300;
+  border: 1px solid #ededed;
+}
+.car-sale-window .csw-content .csw-info {
+  float: right;
+  width: 35%;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.car-sale-window .csw-content .csw-info .sell-car {
+  margin: 20px 0 10px 0;
+  color: #444;
+  font-size: 13px;
+  text-align: center;
+  font-style: italic;
+  border: 1px solid #f8f8f8;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 6px;
+}
+.car-sale-window .csw-content .csw-info .sell-car .sell-car-title {
+  margin-top: -18px;
+  background: #fff;
+  float: left;
+  text-align: left;
+  color: #888;
+  padding: 2px 8px 2px 5px;
+}
+.car-sale-window .csw-content .csw-info .sell-car .sell-button {
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: #f8f8f8;
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  background: #1cb841;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  font-style: none;
+}
+.car-sale-window .csw-content .csw-info .sell-car .sell-button:hover {
+  opacity: 0.9;
+}
+.car-sale-window .csw-content .csw-info .csw-name {
+  margin-top: 15px;
+  color: #444;
+  font-weight: 300;
+  font-size: 22px;
+}
+.car-sale-window .csw-content .csw-info .csw-price {
+  color: #444;
+  font-weight: 300;
+}
+.car-sale-window .csw-content .csw-info .csw-buy {
+  position: absolute;
+  bottom: 10px;
+  border-top: 1px solid #f8f8f8;
+}
+.car-sale-window .csw-content .csw-info .csw-buy h3 {
+  font-size: 16px;
+  font-weight: 300;
+  color: #444;
+}
+.car-sale-window .csw-content .csw-info .csw-buy ul li {
+  display: inline-block;
+  list-style: none;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #ededed;
+  margin-left: -1px;
+  color: #666;
+  font-weight: 300;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 3px;
+}
+.car-sale-window .csw-content .csw-info .csw-buy ul li:hover {
+  background: #60abf8;
+  border: 1px solid #7abcff;
+  color: #fff;
+}
+.car-sale-window .csw-content .csw-info .csw-buy .disabledLink li {
+  background: #f8f8f8;
+}
+#dealership .single-car {
+  float: left;
+  width: 20%;
+  box-sizing: border-box;
+  padding: 8px;
+  position: relative;
+}
+#dealership .single-car .car-popularity {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  height: 25px;
+  width: 40px;
+  line-height: 25px;
+  text-align: center;
+  background: #f8f8f8;
+  border-radius: 5px;
+  color: #444;
+  font-weight: 300;
+  border: 1px solid #ededed;
+}
+#dealership .single-car .car-image {
+  width: 100%;
+  overflow: hidden;
+  padding: 8px;
+  border-radius: 5px;
+}
+#dealership .single-car .car-image img {
+  width: 100%;
+  margin: 0 auto;
+}
+#dealership .single-car .car-info {
+  margin-top: -5px;
+  background: #f8f8f8;
+  height: 60px;
+  width: 100%;
+  color: #444;
+  padding: 8px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#dealership .single-car .car-info .car-category {
+  float: right;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #fff;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 8px;
+}
+#dealership .single-car .car-info h3 {
+  margin: 0;
+  font-size: 18px;
+}
+#dealership .single-car .car-info small {
+  font-size: 15px;
+  color: #666;
+  font-weight: 300;
+}
+#dealership .single-car:hover {
+  cursor: pointer;
+}
+#dealership .single-car:hover .car-info {
+  background: #ededed;
+}
+.category-A {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
+  background: #7abcff;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #7abcff 0%, #60abf8 44%, #4096ee 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7abcff', endColorstr='#4096ee', GradientType=0);
+  /* IE6-9 */
+}
+.category-B {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9c667+0,f79621+100;Orange+3D+%234 */
+  background: #f9c667;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #f9c667 0%, #f79621 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #f9c667 0%, #f79621 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #f9c667 0%, #f79621 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9c667', endColorstr='#f79621', GradientType=0);
+  /* IE6-9 */
+}
+table#garage {
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+table#garage tr {
+  height: 50px;
+  border-bottom: 1px solid #ededed;
+}
+table#garage tr td.car-image {
+  height: 50px;
+  width: 50px;
+  padding: 0px;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+table#garage tr td.car-image img {
+  height: 50px;
+  padding: 5px;
+}
+table#garage tr td.car-popularity,
+table#garage tr td.car-category,
+table#garage tr td.car-hours {
+  color: #666;
+  width: 50px;
+  font-weight: 300;
+  text-align: center;
+}
+table#garage tr td.car-name {
+  font-weight: 300;
+  color: #444;
+}
+table#garage tr td.car-name i {
+  color: #888;
+  font-size: 14px;
+}
+table#garage tr td.car-name small {
+  color: #2196f3;
+  padding-left: 10px;
+}
+table#garage tr td.car-price {
+  color: green;
+  font-weight: 300;
+}
+table#garage tr td.car-maintenance {
+  text-align: center;
+  width: 50px;
+  color: #888;
+  font-size: 13px;
+}
+table#garage tr td.car-maintenance a {
+  color: #2196f3;
+}
+table#garage tr td.car-maintenance a:hover {
+  text-decoration: underline;
+}
+table#garage tr td.car-parked {
+  width: 120px;
+  text-align: center;
+  color: #888;
+  font-size: 12px;
+}
+table#garage tr td.car-parked i {
+  color: #666;
+  font-size: 13px;
+}
+table#garage tr td.single-car:hover {
+  color: #7abcff;
+  cursor: pointer;
+}
+table#garage tr th {
+  color: #444;
+}
+table#garage tr:first-child {
+  border-top: 1px solid #ededed;
+}
+table#garage tr:hover {
+  background: #f8f8f8;
 }

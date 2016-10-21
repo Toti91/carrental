@@ -17,8 +17,11 @@ class CreateCarTable extends Migration
             $table->integer('category_id');
             $table->string('name');
             $table->integer('price');
+            $table->integer('gamma');
             $table->string('status');
             $table->string('image');
+            $table->integer('popularity');
+            $table->integer('maint_cost');
             $table->timestamps();
         });
     }

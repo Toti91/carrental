@@ -23,6 +23,15 @@ Route::auth();
 Route::get('/home', 'HomeController@index');
 Route::get('/makeAdmin/{id}', 'HomeController@makeAdmin');
 
+Route::get('/dealership', 'HomeController@getDealership');
+Route::post('/getcarinfo/{id}/{rent_id?}', 'HomeController@postCarInfo');
+Route::get('/buycar/{id}/{amount}', 'HomeController@buyCar');
+
+Route::get('/garage', 'HomeController@getGarage');
+Route::get('/rentcar/{id}', 'HomeController@rentCar');
+Route::get('/sellcar/{id}', 'HomeController@sellCar');
+Route::get('/maintenance/{id}', 'HomeController@maintainCar');
+
 // NEW CAR RENTAL HANDLING
 Route::get('/create', function(){
 	if(Auth::user()->rental){
@@ -102,4 +111,8 @@ Route::group(['middleware' => 'admin'], function () {
 	//Admin Settings
 	Route::get('admin/settings', 'AdminController@getSettings');
 	Route::post('admin/settings/change', 'AdminController@changeSetting');
+
+	//Admin malfunctions
+	Route::get('admin/malfunctions', 'AdminController@getMalfunctions');
+	Route::post('admin/malfunction/new', 'AdminController@newCar');
 });

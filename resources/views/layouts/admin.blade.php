@@ -62,6 +62,10 @@
 					@if($active == 'cars') <div class="triangle"></div> @endif
 					<i class="fa fa-car"></i> <div class="wide-sidebar"> Cars </div>
 				</li></a>
+				<a href="/admin/malfunctions"><li @if($active == 'malfunctions') class="active" @endif>
+					@if($active == 'malfunctions') <div class="triangle"></div> @endif
+					<i class="fa fa-wrench"></i> <div class="wide-sidebar"> Malfunctions </div>
+				</li></a>
 				<a href="/admin/users"><li @if($active == 'users') class="active" @endif>
 					@if($active == 'users') <div class="triangle"></div> @endif
 					<i class="fa fa-users"></i> <div class="wide-sidebar"> Users </div>

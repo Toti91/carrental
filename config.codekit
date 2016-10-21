@@ -218,6 +218,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/app\/Malfunction.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/Malfunction.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/app\/Notification.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -331,6 +340,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/app\/User.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/app\/userCar.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/app\/userCar.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -589,6 +607,24 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/database\/migrations\/2016_10_20_155101_create_malfunctions_table.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/database\/migrations\/2016_10_20_155101_create_malfunctions_table.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/database\/migrations\/2016_10_20_155122_create_malfunction_car_table.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/database\/migrations\/2016_10_20_155122_create_malfunction_car_table.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/database\/seeds\/DatabaseSeeder.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -652,6 +688,15 @@
 		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/css\/frontPage.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/public\/css\/garage.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/css\/garage.css",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -818,6 +863,26 @@
 		"strictMath": 0,
 		"strictUnits": 0
 		},
+	"\/public\/less\/dealership.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/less\/dealership.less",
+		"outputAbbreviatedPath": "\/public\/css\/dealership.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
 	"\/public\/less\/frontPage.less": {
 		"allowInsecureImports": 0,
 		"createSourceMap": 0,
@@ -828,6 +893,26 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/public\/less\/frontPage.less",
 		"outputAbbreviatedPath": "\/public\/css\/frontPage.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 0,
+		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/public\/less\/garage.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/public\/less\/garage.less",
+		"outputAbbreviatedPath": "\/public\/css\/garage.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1008,6 +1093,160 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/public\/useruploads\/1476515258.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 55149,
+		"inputAbbreviatedPath": "\/public\/useruploads\/1476515258.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/1476515258.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/1476515305.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 39895,
+		"inputAbbreviatedPath": "\/public\/useruploads\/1476515305.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/1476515305.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/1476516763.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 254971,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/1476516763.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/1476516763.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/1476516813.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 108792,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/1476516813.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/1476516813.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/1476517636.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 239402,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/1476517636.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/1476517636.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/1476517716.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 104680,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/1476517716.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/1476517716.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/1476545502.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 26983,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/1476545502.jpg",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/1476545502.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/1476545600.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 542962,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/1476545600.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/1476545600.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/icon\/1476516763.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 29898,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476516763.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476516763.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/icon\/1476516813.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24548,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476516813.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476516813.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/icon\/1476517636.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 36561,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476517636.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476517636.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/icon\/1476517716.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 24527,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476517716.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476517716.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/icon\/1476545502.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 7233,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476545502.jpg",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476545502.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/cars\/icon\/1476545600.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 22151,
+		"inputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476545600.png",
+		"outputAbbreviatedPath": "\/public\/useruploads\/cars\/icon\/1476545600.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/public\/useruploads\/rentals\/1467278776.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -1037,6 +1276,28 @@
 		"initialSize": 40867,
 		"inputAbbreviatedPath": "\/public\/useruploads\/rentals\/1467279450_JKARw6C.jpg.jpg",
 		"outputAbbreviatedPath": "\/public\/useruploads\/rentals\/1467279450_JKARw6C.jpg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/rentals\/1467307016_WhereTo_Bigger.jpg.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 34506,
+		"inputAbbreviatedPath": "\/public\/useruploads\/rentals\/1467307016_WhereTo_Bigger.jpg.jpg",
+		"outputAbbreviatedPath": "\/public\/useruploads\/rentals\/1467307016_WhereTo_Bigger.jpg.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/public\/useruploads\/rentals\/1476428883_IMG_0003.JPG.JPG": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 49130,
+		"inputAbbreviatedPath": "\/public\/useruploads\/rentals\/1476428883_IMG_0003.JPG.JPG",
+		"outputAbbreviatedPath": "\/public\/useruploads\/rentals\/1476428883_IMG_0003.JPG.JPG",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1137,6 +1398,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/resources\/views\/admin\/index.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/resources\/views\/admin\/malfunctions.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resources\/views\/admin\/malfunctions.blade.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1267,11 +1537,29 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/resources\/views\/dealership.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resources\/views\/dealership.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/resources\/views\/errors\/503.blade.php": {
 		"fileType": 8192,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/resources\/views\/errors\/503.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/resources\/views\/garage.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resources\/views\/garage.blade.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1330,6 +1618,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/resources\/views\/windows\/carsale.blade.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/resources\/views\/windows\/carsale.blade.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/server.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1344,6 +1641,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/storage\/framework\/views\/01d4616ed6d7c68bb930b57c298459ae5aa76d08.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/storage\/framework\/views\/079249b41f488d2aa64c079f42de3c883b85b5cd.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/storage\/framework\/views\/079249b41f488d2aa64c079f42de3c883b85b5cd.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1447,6 +1753,15 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/storage\/framework\/views\/554e0b21c4ee8e6f67e6e12d82c48955cd8cb468.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/storage\/framework\/views\/554e0b21c4ee8e6f67e6e12d82c48955cd8cb468.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/storage\/framework\/views\/6230778a9d8d42a03797f6a482c5ab0eaf3eeaf9.php": {
 		"fileType": 8192,
 		"ignore": 0,
@@ -1515,6 +1830,24 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/storage\/framework\/views\/dceed2abb785215042f2e51307228620d83cc38f.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/storage\/framework\/views\/e93add3660656e4cbc947295073349821b553091.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/storage\/framework\/views\/e93add3660656e4cbc947295073349821b553091.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/storage\/framework\/views\/ee019484df22d5f2a82f93eae6c6a095d1d4e352.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/storage\/framework\/views\/ee019484df22d5f2a82f93eae6c6a095d1d4e352.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
@@ -1733,6 +2066,15 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/vendor\/composer\/autoload_real.php",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/vendor\/composer\/autoload_static.php": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/vendor\/composer\/autoload_static.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

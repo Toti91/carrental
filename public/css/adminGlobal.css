@@ -1084,7 +1084,10 @@ ul#settings-nav a {
   margin-bottom: 8px;
 }
 .input-2 {
-  width: 48%;
+  width: 49%;
+}
+.input-3 {
+  width: 32.6%;
 }
 .textarea-default {
   width: 100%;

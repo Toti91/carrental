@@ -16,8 +16,12 @@ class CreateCarUserTable extends Migration
             $table->increments('id');
             $table->integer('car_id');
             $table->integer('user_id');
+            $table->string('plate');
             $table->integer('km_count');
             $table->integer('price');
+            $table->integer('start');
+            $table->integer('end');
+            $table->integer('maint_count');
             $table->timestamps();
         });
     }

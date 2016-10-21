@@ -1,0 +1,244 @@
+#dealership {
+	margin:15px 0 0 0;
+}
+
+.car-sale-window {
+	display: none;
+	width:800px;
+	position:fixed;
+	left:50%;
+	margin-left:-400px;
+	top:120px;
+	z-index:999;
+	background:#fff;
+	border-radius:10px;
+	i {
+		position:absolute;
+		right:10px;
+		top:10px;
+		font-size:20px;
+		color:#666;
+	}
+	i:hover {
+		color:#444;
+		cursor: pointer;
+	}
+	.csw-content {
+		.csw-image {
+			float:left;
+			width:65%;
+			border-top-left-radius: 10px;
+			border-bottom-left-radius: 10px;
+			position:relative;
+			padding:50px 0;
+			img {
+				width:90%;
+				margin-left:5%;
+			}
+			.csw-popularity {
+				position:absolute;
+				left:15px;
+				top:15px;
+				height:35px;
+				width:35px;
+				line-height: 35px;
+				text-align:center;
+				background:#f8f8f8;
+				border-radius:5px;
+				color:#444;
+				font-weight:300;
+				border:1px solid #ededed;
+			}
+			.csw-category {
+				position:absolute;
+				right:15px;
+				top:15px;
+				height:35px;
+				width:35px;
+				line-height: 35px;
+				text-align:center;
+				background:#f8f8f8;
+				border-radius:5px;
+				color:#444;
+				font-weight:300;
+				border:1px solid #ededed;
+			}
+		}
+		.csw-info {
+			float:right;
+			width:35%;
+			box-sizing: border-box;
+			padding:10px;
+			.sell-car {
+				margin:20px 0 10px 0;
+				color:#444;
+				font-size:13px;
+				text-align:center;
+				font-style: italic;
+				border:1px solid #f8f8f8;
+				border-radius:6px;
+				box-sizing: border-box;
+				padding:6px;
+				.sell-car-title {
+					margin-top:-18px;
+					background:#fff;
+					float:left;
+					text-align:left;
+					color:#888;
+					padding:2px 8px 2px 5px;
+				}
+				.sell-button {
+					display:block;
+					width:100%;
+					height:40px;
+					line-height:40px;
+					text-align:center;
+					color:#f8f8f8;
+					border:1px solid #ededed;
+					border-radius:4px;
+					background: rgb(28, 184, 65);
+					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+					font-style:none;
+				}
+				.sell-button:hover {
+					opacity:0.9;
+				}
+			}
+			.csw-name {
+				margin-top:15px;
+				color:#444;
+				font-weight:300;
+				font-size:22px;
+			}
+			.csw-price {
+				color:#444;
+				font-weight:300;
+			}
+
+			.csw-buy {
+				position:absolute;
+				bottom:10px;
+				border-top:1px solid #f8f8f8;
+				h3 {
+					font-size:16px;
+					font-weight:300;
+					color:#444;
+				}
+				ul {
+					li {
+						display:inline-block;
+						list-style: none;
+						height:30px;
+						width:30px;
+						border:1px solid #ededed;
+						margin-left:-1px;
+						color:#666;
+						font-weight:300;
+						text-align: center;
+						line-height: 30px;
+						border-radius:3px;
+					}
+					li:hover {
+						background:#60abf8;
+						border:1px solid #7abcff;
+						color:#fff;
+					}
+				}
+				.disabledLink {
+					li {
+						background:#f8f8f8;
+					}
+				}
+			}
+		}
+	}
+}
+#dealership {
+	.single-car {
+		float:left;
+		width: 20%;
+		box-sizing: border-box;
+		padding:8px;
+		position:relative;
+
+		.car-popularity {
+			position:absolute;
+			right:15px;
+			top:15px;
+			height:25px;
+			width:40px;
+			line-height: 25px;
+			text-align:center;
+			background:#f8f8f8;
+			border-radius:5px;
+			color:#444;
+			font-weight:300;
+			border:1px solid #ededed;
+		}
+
+		.car-image {
+			width:100%;
+			overflow:hidden;
+			padding:8px;
+			border-radius:5px;
+			img {
+				width:100%;
+				margin:0 auto;
+			}
+		}
+		.car-info {
+			.car-category {
+				float:right;
+				height:30px;
+				width:30px;
+				line-height:30px;
+				text-align: center;
+				background:#fff;
+				border-radius:5px;
+				font-size:16px;
+				font-weight:300;
+				margin-top:8px;
+			}
+			h3 {
+				margin:0;
+				font-size:18px;
+			}
+			small {
+				font-size:15px;
+				color:#666;
+				font-weight:300;
+			}
+			margin-top:-5px;
+			background:#f8f8f8;
+			height:60px;
+			width:100%;
+			color:#444;
+			padding:8px;
+			border-bottom-right-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+	}
+	.single-car:hover {
+		cursor:pointer;
+		.car-info {
+			background:#ededed;
+		}
+	}
+}
+
+.category-A {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7abcff+0,60abf8+44,4096ee+100;Blue+3D+%2314 */
+	background: #7abcff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7abcff', endColorstr='#4096ee',GradientType=0 ); /* IE6-9 */
+}
+.category-B {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f9c667+0,f79621+100;Orange+3D+%234 */
+	background: #f9c667; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f9c667 0%, #f79621 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #f9c667 0%,#f79621 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #f9c667 0%,#f79621 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9c667', endColorstr='#f79621',GradientType=0 ); /* IE6-9 */
+}

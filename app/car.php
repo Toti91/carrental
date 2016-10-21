@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Car extends Model
 {
-    protected $table = 'Car';
+    protected $table = 'car';
+
+    public function Category()
+	{
+	    return $this->belongsTo('App\Category');
+	}
 }

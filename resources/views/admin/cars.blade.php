@@ -18,7 +18,9 @@
 				@endforeach
 			</select>
 			<input type="text" name="name" placeholder="Name" class="input-default">
-			<input type="number" name="price" placeholder="Price" class="input-default">
+			<input type="number" name="price" placeholder="Price" class="input-default input-3">
+			<input type="text" name="gamma" placeholder="Gamma" class="input-default input-3">
+			<input type="number" name="popularity" placeholder="Popularity" class="input-default input-3">
 			<input type="file" name="image" accept="image/*" class="input-default">
 			<input type="submit" id="submit-car" class="submit-default">
 		</form>
@@ -48,12 +50,13 @@
 	<div class="content content-6">
 		@foreach($cars as $car)
 			<div class="single-item">
-				<div class="si-icon"> <img src="/useruploads/{{ $car->image }}"> </div>
+				<div class="si-icon"> <img src="/useruploads/cars/icon/{{ $car->image }}"> </div>
 				<div class="si-top">
 					<div class="si-name"> {{ $car->name }} </div>
-					<div class="si-price"> {{ number_format($car->price, 0, ',', '.') }} ISK </div>
+					<div class="si-price"> ${{ number_format($car->price, 0, ',', '.') }} </div>
 				</div>
 				<div class="si-bottom">
+					<div class="si-price"> {{ $car->popularity }}% </div>
 					<div class="si-status status-{{ $car->status }}"> <a href="#">{{ $car->status }}</a> </div>
 					<div class="si-actions">
 						<a href="#">edit</a>

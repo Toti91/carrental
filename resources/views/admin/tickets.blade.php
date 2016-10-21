@@ -30,43 +30,47 @@
 
 @section('container')
 	<div class="content content-4">
-		@foreach($tickets as $ticket)
-			<?php 
-				$user = \App\User::where('email', '=', $ticket->email)->first(); 
-				$assigned = $ticket->user();
+		@if($tickets)
+			@foreach($tickets as $ticket)
+				<?php 
+					$user = \App\User::where('email', '=', $ticket->email)->first(); 
+					$assigned = $ticket->user();
 
-				if($ticket->status == 0){
-					$class = "si-new";
-				} elseif($ticket->status == 1){
-					$class = "si-high";
-				} elseif($ticket->status == 2){
-					$class = "si-medium";
-				} elseif($ticket->status == 3){
-					$class = "si-low";
-				} else {
-					$class = "si-finished";
-				}
+					if($ticket->status == 0){
+						$class = "si-new";
+					} elseif($ticket->status == 1){
+						$class = "si-high";
+					} elseif($ticket->status == 2){
+						$class = "si-medium";
+					} elseif($ticket->status == 3){
+						$class = "si-low";
+					} else {
+						$class = "si-finished";
+					}
 
-			?>
-			<a href="#" class="ticket-link" ticketId="{{ $ticket->id }}">
-				<div class="single-item {{ $class }}">
-					<div class="si-icon"> 
-						@if($user)
-							<img src="{{ $user->avatar }}"> 
-						@else 
-							<i class="fa fa-user"></i>
-						@endif
+				?>
+				<a href="#" class="ticket-link" ticketId="{{ $ticket->id }}">
+					<div class="single-item {{ $class }}">
+						<div class="si-icon"> 
+							@if($user)
+								<img src="{{ $user->avatar }}"> 
+							@else 
+								<i class="fa fa-user"></i>
+							@endif
+						</div>
+						<div class="si-top">
+							<div class="si-name"> {{ $ticket->subject }} </div>
+						</div>
+						<div class="si-bottom">
+							<div class="si-description"> <p>{{ substr($ticket->description, 0, 45) }}... </p> </div>
+						</div>
+						<div class="clear"></div>
 					</div>
-					<div class="si-top">
-						<div class="si-name"> {{ $ticket->subject }} </div>
-					</div>
-					<div class="si-bottom">
-						<div class="si-description"> <p>{{ substr($ticket->description, 0, 45) }}... </p> </div>
-					</div>
-					<div class="clear"></div>
-				</div>
-			</a>
-		@endforeach
+				</a>
+			@endforeach
+		@else
+			No tickets
+		@endif
 	</div>
 	<div class="content content-6">
 		<div class="ticket-content">

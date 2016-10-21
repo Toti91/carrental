@@ -1,3 +1,5 @@
+<?PHP $active_section = 'index'; ?>
+
 @extends('layouts.app')
 
 @section('title')
