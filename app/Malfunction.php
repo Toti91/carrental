@@ -10,6 +10,6 @@ class Malfunction extends Model
 
     public function cars()
     {
-	    return $this->belongsToMany('App\userCar', 'malfunction_car', 'rent_id', 'malfunction_id');
+	    return $this->belongsToMany('App\userCar', 'malfunction_car', 'malfunction_id', 'rent_id');
 	}
 }

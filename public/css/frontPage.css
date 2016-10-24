@@ -7046,6 +7046,7 @@ header .facebook-login {
   background: #f9f9f9;
   width: 100%;
   border-bottom: 1px solid #ededed;
+  position: fixed;
 }
 #rental-bar .rental-info {
   float: left;
@@ -7102,4 +7103,7 @@ header .facebook-login {
 #rental-bar .rental-status .rs-section small {
   color: #888;
   margin-right: 2px;
+}
+#content {
+  margin-top: 80px;
 }

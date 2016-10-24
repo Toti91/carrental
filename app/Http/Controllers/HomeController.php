@@ -118,10 +118,13 @@ class HomeController extends Controller
 
     public function rentCar($rent_id){
         $lease = \App\userCar::find($rent_id);
+        $message = '';
         if($lease){
             if(!$lease->rented){
                 //check if user owns car
                 if(Auth::user()->id == $lease->user_id){
+                    $return = array();
+
                     $car = \App\Car::find($lease->car_id);
                     $category = \App\Category::find($car->category_id);
                     $rental = Auth::user()->rental;
@@ -135,27 +138,47 @@ class HomeController extends Controller
                     $total_rent = round(($time / 12) * $rent);
                     //Calculate drop in car value
                     $new_value = $car->price - ($car->price * ((0.0001 * $total_hours) + 0.15));
+                    //Check if car sustained a breakdown
+                    $probability = null;
+                    ($lease->maint_count >= 100) ? $probability = 20 : $probability = 5;
+                    $malfunction = false;
+                    if(rand(1, 100) <= $probability){
+                        // Adds random malfunction to car
+                        $this->carMalfunctioned($lease->id);
+                        $message = ' - This car broke down';
+                        $malfunction = true;
+                    }
+
                     //update user_car
                     $lease->km_count = $total_hours;
                     $lease->price = $new_value;
                     $lease->rented = 1;
                     $lease->start = time();
                     $lease->end = time() + (($time*60)*60);
-                    $lease->maint_count = $lease->maint_count + $total_hours;
+                    $lease->maint_count = $lease->maint_count + $time;
                     $lease->save();
 
                     $rental->money = $rental->money + $total_rent;
                     $rental->save();
 
-                    session()->flash('flash_success', 'Car was rented for '.$time.' hours and you earned $'.$total_rent);
-                    return redirect('/garage');
+                    session()->flash('flash_success', 'Car was rented for '.$time.' hours and you earned $'.$total_rent.$message);
+
+                    $return['new_gamma'] = $new_gamma;
+                    $return['total_hours'] = $total_hours;
+                    $return['new_value'] =  '$'.number_format($new_value, 0, ',', '.');
+                    $return['malfunction'] = $malfunction;
+                    $return['end_time'] = $lease->end;
+                    $return['probability'] = $probability;
+                    $return['maintenance'] = ($lease->maint_count >= 100) ? true : false;
+
+                    return $return;
                 }
             }
             session()->flash('flash_error', 'This car is already leased!');
-            return redirect('/garage');
+            return 'This car is already leased!';
         }
         session()->flash('flash_error', 'Something went wrong, try again!');
-        return redirect('/garage');
+        return 'Something went wrong, try again!';
     }
 
     public function weightedrand($min, $max, $gamma) {
@@ -214,6 +237,29 @@ class HomeController extends Controller
         }
     }
 
+    public function fixCar($id){
+        $lease = \App\userCar::find($id);
+        $malfunction = $lease->malfunctions->first();
+        if($malfunction){
+            $rental = Auth::user()->rental;
+            if($rental->money >= $malfunction->cost){
+                $rental->money = $rental->money - $malfunction->cost;
+                $rental->save();
+
+                session()->flash('flash_success', 'Car was fixed for $'.$malfunction->cost);
+                $lease->malfunctions()->detach($malfunction->id);
+
+                return redirect('/garage');
+            }
+            else {
+                session()->flash('flash_error', 'You could\'nt afford it!');
+                return redirect('/garage'); 
+            }
+        }
+        session()->flash('flash_error', 'Something went wrong, try again!');
+        return redirect('/garage');
+    }
+
     function generateFirstPart($length = 2) {
         $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $charactersLength = strlen($characters);
@@ -236,5 +282,14 @@ class HomeController extends Controller
     function generatePlate() {
         $plate = $this->generateFirstPart() . '-' . $this->generateSeconPart();
         return $plate;
+    }
+
+    function carMalfunctioned($id){
+        $malfunction = \App\Malfunction::inRandomOrder()->first();
+        $lease = \App\userCar::find($id);
+
+        $lease->malfunctions()->attach($malfunction->id);
+
+        return true;
     }
 }

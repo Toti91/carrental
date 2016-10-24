@@ -11,9 +11,9 @@
 	<div class="single-overlay-content">
 		<form method="POST" action="/admin/malfunction/new" class="input-default" enctype="multipart/form-data">
 			{{ csrf_field() }}
-			<input type="text" name="subject" placeholder="Malfunction" class="input-default">
+			<input type="text" name="name" placeholder="Malfunction" class="input-default">
 			<textarea name="description" class="textarea-default" placeholder="Description"></textarea>
-			<input type="text" name="subject" placeholder="Malfunction" class="input-default">
+			<input type="number" name="cost" placeholder="Cost" class="input-default">
 			<input type="submit" id="submit-car" class="submit-default">
 		</form>
 	</div>
@@ -33,9 +33,10 @@
 		@foreach($malfunctions as $mal)
 			<div class="single-item">
 				<div class="si-top">
-					<div class="si-name"> {{ $mal->name }} </div>
+					<div class="si-name"> {{ $mal->name }} <small>{{ $mal->description }}</small> </div>
 					<div class="si-price"> ${{ number_format($mal->cost, 0, ',', '.') }} </div>
 				</div>
+				<div class="clear"></div>
 				<div class="si-bottom">
 					<div class="si-actions">
 						<a href="#">edit</a>

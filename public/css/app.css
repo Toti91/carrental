@@ -45,6 +45,13 @@ body {
 .disabledLink {
   pointer-events: none;
 }
+.loading {
+  height: 30px;
+  width: 30px;
+  background: url(/images/loading.gif);
+  background-size: 30px 30px;
+  margin: 10px auto;
+}
 .alert {
   position: fixed;
   top: 100px;
@@ -7058,6 +7065,7 @@ header .facebook-login {
   background: #f9f9f9;
   width: 100%;
   border-bottom: 1px solid #ededed;
+  position: fixed;
 }
 #rental-bar .rental-info {
   float: left;
@@ -7114,6 +7122,9 @@ header .facebook-login {
 #rental-bar .rental-status .rs-section small {
   color: #888;
   margin-right: 2px;
+}
+#content {
+  margin-top: 80px;
 }
 #dealership {
   margin: 15px 0 0 0;
@@ -7226,6 +7237,9 @@ header .facebook-login {
   color: #444;
   font-weight: 300;
   font-size: 22px;
+}
+.car-sale-window .csw-content .csw-info .csw-name small {
+  color: #2196f3;
 }
 .car-sale-window .csw-content .csw-info .csw-price {
   color: #444;
@@ -7356,6 +7370,13 @@ header .facebook-login {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9c667', endColorstr='#f79621', GradientType=0);
   /* IE6-9 */
 }
+.flash-car {
+  height: 45px;
+  margin: 0;
+  padding: 0;
+  line-height: 45px;
+  text-indent: 8px;
+}
 table#garage {
   width: 100%;
   margin: 20px 0 0 0;
@@ -7363,6 +7384,9 @@ table#garage {
 table#garage tr {
   height: 50px;
   border-bottom: 1px solid #ededed;
+}
+table#garage tr td {
+  padding: 0;
 }
 table#garage tr td.car-image {
   height: 50px;
@@ -7404,6 +7428,15 @@ table#garage tr td.car-maintenance {
   width: 50px;
   color: #888;
   font-size: 13px;
+}
+table#garage tr td.car-maintenance i.danger-fa {
+  color: red;
+}
+table#garage tr td.car-maintenance i.success-fa {
+  color: green;
+}
+table#garage tr td.car-maintenance i.meh-fa {
+  color: #E8CC00;
 }
 table#garage tr td.car-maintenance a {
   color: #2196f3;

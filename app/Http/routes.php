@@ -28,9 +28,18 @@ Route::post('/getcarinfo/{id}/{rent_id?}', 'HomeController@postCarInfo');
 Route::get('/buycar/{id}/{amount}', 'HomeController@buyCar');
 
 Route::get('/garage', 'HomeController@getGarage');
-Route::get('/rentcar/{id}', 'HomeController@rentCar');
+Route::post('/rentcar/{id}', 'HomeController@rentCar');
 Route::get('/sellcar/{id}', 'HomeController@sellCar');
 Route::get('/maintenance/{id}', 'HomeController@maintainCar');
+Route::get('/fixcar/{id}', 'HomeController@fixCar');
+
+Route::post('/updateMoney', function(){
+	$money = Auth::user()->rental;
+	return '<small>$</small>'.number_format($money->money, 0, ',', '.');
+});
+Route::post('/updateParkedCars', function(){
+	return '<small><i class="fa fa-plug"></i></small>'.number_format(\App\userCar::countParked(), 0, ',', '.');
+});
 
 // NEW CAR RENTAL HANDLING
 Route::get('/create', function(){
@@ -114,5 +123,5 @@ Route::group(['middleware' => 'admin'], function () {
 
 	//Admin malfunctions
 	Route::get('admin/malfunctions', 'AdminController@getMalfunctions');
-	Route::post('admin/malfunction/new', 'AdminController@newCar');
+	Route::post('admin/malfunction/new', 'AdminController@newMalfunction');
 });

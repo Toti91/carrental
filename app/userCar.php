@@ -37,8 +37,8 @@ class userCar extends Model
 		return true;
 	}
 
-	public function Malfunctions()
+	public function malfunctions()
 	{
-	    return $this->belongsToMany('App\Malfunction', 'malfunction_car', 'malfunction_id', 'rent_id');
+	    return $this->belongsToMany('App\Malfunction', 'malfunction_car', 'rent_id', 'malfunction_id');
 	}
 }

@@ -1,9 +1,19 @@
+.flash-car {
+	height:45px;
+	margin:0;
+	padding:0;
+	line-height:45px;
+	text-indent:8px;
+}
 table#garage {
 	width:100%;
 	margin:20px 0 0 0;
 	tr {
 		height:50px;
 		border-bottom:1px solid #ededed;
+		td {
+			padding:0;
+		}
 		td.car-image {
 			height:50px;
 			width:50px;
@@ -43,6 +53,15 @@ table#garage {
 			width:50px;
 			color:#888;
 			font-size:13px;
+			i.danger-fa {
+				color:red;
+			}
+			i.success-fa {
+				color:green;
+			}
+			i.meh-fa {
+				color:#E8CC00;
+			}
 			a {
 				color:#2196f3;
 			}

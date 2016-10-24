@@ -325,4 +325,15 @@ class AdminController extends Controller
         $malfunctions = \App\Malfunction::get();
         return view('admin/malfunctions')->with('malfunctions', $malfunctions);
     }
+
+    public function newMalfunction(){
+        $malfunction = new \App\Malfunction;
+        $malfunction->name = $_POST['name'];
+        $malfunction->description = $_POST['description'];
+        $malfunction->cost = $_POST['cost'];
+        $malfunction->save();
+
+        session()->flash('flash_success', 'New malfunction created!');
+        return redirect('/admin/malfunctions/');
+    }
 }

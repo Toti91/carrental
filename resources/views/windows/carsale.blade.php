@@ -8,7 +8,7 @@
 </div>
 <div class="csw-info">
 	<div class="csw-name">
-		{{ $car->name }}
+		{{ $car->name }} @if(isset($rent_car)) <small>{{ $rent_car->plate }}</small>  @endif
 	</div>
 	<div class="csw-price">
 		${{ number_format($car->price, 0, ',', '.') }}
@@ -28,6 +28,23 @@
 			@endif
 		</div>
 	@endif
+
+	@if(isset($rent_car) && $rent_car->malfunctions()->first())
+		<?PHP $malfunction = $rent_car->malfunctions()->first(); ?>
+		<div class="sell-car">
+			<div class="sell-car-title">Fix car</div>
+			<div class="clear"></div>
+				<div class="fix-car-title">
+					{{ $malfunction->name }}
+				</div>
+				<div class="fix-car-description">
+					{{ $malfunction->description }}
+				</div>
+			
+				<a href="/fixcar/{{ $rent_car->id }}" class="sell-button">Fix for ${{ number_format($malfunction->cost, 0, ',', '.') }}</a>
+		</div>
+	@endif
+	@if(!isset($rent_car))
 	<div class="csw-buy">
 		<h3> How many you want to buy? </h3>
 		<ul>
@@ -58,6 +75,7 @@
 		</ul>
 	</div>	
 </div>
+@endif
 <div class="clear"></div>
 <script>
 	$('.tooltip').tooltip({delay: 50});

@@ -20,6 +20,26 @@
 
 </head>
 <body id="app-layout">
+	<script>
+		function updateAccount(){
+            var div = $('#account_money');
+            $.post('/updateMoney', { _token: "{{ csrf_token() }}" }, function(data) {
+                div.slideUp(function(){
+                	div.html(data);
+                	div.slideDown();
+                });
+            });
+        }
+        function updateParkedCars(){
+            var div = $('#parked_cars');
+            $.post('/updateParkedCars', { _token: "{{ csrf_token() }}" }, function(data) {
+                div.slideUp(function(){
+                	div.html(data);
+                	div.slideDown();
+                });
+            });
+        }
+	</script>
 	<!-- Flash messages -->
 	@if(session()->has('flash_success'))
 		<div class="alert success-alert">
@@ -72,7 +92,7 @@
 				</div>
 				<div class="rental-status">
 					<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Account">
-						<small>$</small>{{ number_format($rental->money, 0, ',', '.') }}
+						<div id="account_money"><small>$</small>{{ number_format($rental->money, 0, ',', '.') }}</div>
 					</div>
 				</div>
 				<div class="rental-status">
@@ -82,7 +102,7 @@
 				</div>
 				<div class="rental-status">
 					<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Parked cars">
-						<small><i class="fa fa-plug"></i></small>{{ number_format(\App\userCar::countParked(), 0, ',', '.') }}
+						<div id="parked_cars"><small><i class="fa fa-plug"></i></small>{{ number_format(\App\userCar::countParked(), 0, ',', '.') }}</div>
 					</div>
 				</div>
 				<div class="rental-status">
