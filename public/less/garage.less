@@ -26,11 +26,31 @@ table#garage {
 			}
 		}
 
-		td.car-popularity, td.car-category, td.car-hours {
+		td.car-popularity, td.car-category {
 			color:#666;
 			width:50px;
 			font-weight:300;
 			text-align: center;
+		}
+		td.car-hours {
+			width:100px;
+			backgorund:#ededed;
+			.car-hours-container {
+				width:100%;
+				height:10px;
+				border-radius: 5px;
+				background:#ededed;
+				overflow:hidden;
+				box-shadow: inset 1px 1px 10px #c4c4c4;
+				.car-hours-filler {
+					background:#84C875;
+					height:10px;
+				}
+				.car-hours-filler-full {
+					background:#FF7777;
+					width:100%;
+				}
+			}
 		}
 		td.car-name {
 			font-weight:300;
@@ -45,8 +65,12 @@ table#garage {
 			}
 		}
 		td.car-price {
-			color:green;
+			color:#444;
 			font-weight:300;
+			text-align:center;
+			small {
+				color:#888;
+			}
 		}
 		td.car-maintenance {
 			text-align: center;
@@ -54,10 +78,10 @@ table#garage {
 			color:#888;
 			font-size:13px;
 			i.danger-fa {
-				color:red;
+				color:#FF7777;
 			}
 			i.success-fa {
-				color:green;
+				color:#84C875;
 			}
 			i.meh-fa {
 				color:#E8CC00;
@@ -78,6 +102,25 @@ table#garage {
 				color:#666;
 				font-size:13px;
 			}
+			a.rent_link {
+				display:block;
+				height:35px;
+				line-height: 35px;
+				width:80px;
+				text-align: center;
+				margin:0 auto;
+				background:#2196f3;
+				border-radius:6px;
+				color:#fff;
+
+				i {
+					color:#ededed;
+					margin-right:2px;
+				}
+			}
+			a.rent_link:hover {
+				opacity:0.8;
+			}
 		}
 		td.single-car:hover {
 			color:#7abcff;
@@ -87,6 +130,9 @@ table#garage {
 		th {
 			color:#444;
 		}
+		td.center-align {
+			text-align:center;
+		}
 	}
 	tr:first-child {
 		border-top:1px solid #ededed;
@@ -94,5 +140,13 @@ table#garage {
 
 	tr:hover {
 		background:#f8f8f8;
+	}
+}
+ul.pagination {
+	margin:10px;
+	li.active {
+		background:#2196f3;
+		color:#fff;
+		font-weight:300;
 	}
 }

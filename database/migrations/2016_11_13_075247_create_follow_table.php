@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CrateCarRentalsTable extends Migration
+class CreateFollowTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,14 +12,10 @@ class CrateCarRentalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('car_rentals', function(blueprint $table){
+        Schema::create('follow', function (Blueprint $table){
             $table->increments('id');
             $table->integer('user_id');
-            $table->string('name');
-            $table->float('stock');
-            $table->integer('money');
-            $table->string('icon');
-            $table->integer('tutorial');
+            $table->integer('user_follow_id');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class CrateCarRentalsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('car_rentals');
+        Schema::drop('follow');
     }
 }

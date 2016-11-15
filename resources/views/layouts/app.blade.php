@@ -10,6 +10,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="/js/jquery.min.js"></script>
     <script src="/js/materialize.min.js"></script>
+    <script src="/js/jquery.countdown.min.js"></script>
 
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -39,28 +40,46 @@
                 });
             });
         }
+        function updateStock(){
+            var div = $('#stock');
+            $.post('/updateStock', { _token: "{{ csrf_token() }}" }, function(data) {
+                div.slideUp(function(){
+                	div.html(data);
+                	div.slideDown();
+                });
+            });
+        }
+        function showAlert(message, type){
+       		$('.flash-messages').prepend('<div class="alert '+type+'">'+message+'</div><div class="clear"></div>');
+
+       		$('.alert').delay(3000).slideUp();
+       	}
 	</script>
 	<!-- Flash messages -->
-	@if(session()->has('flash_success'))
-		<div class="alert success-alert">
-			{{ session()->get('flash_success') }}
-		</div>
-	@endif
-	@if(session()->has('flash_error'))
-		<div class="alert error-alert">
-			{{ session()->get('flash_error') }}
-		</div>
-	@endif
-	@if(session()->has('flash_info'))
-		<div class="alert info-alert">
-			{{ session()->get('flash_info') }}
-		</div>
-	@endif
+	<div class="flash-messages">
+		@if(session()->has('flash_success'))
+			<div class="alert success-alert">
+				{{ session()->get('flash_success') }}
+			</div>
+		@endif
+		@if(session()->has('flash_error'))
+			<div class="alert error-alert">
+				{{ session()->get('flash_error') }}
+			</div>
+		@endif
+		@if(session()->has('flash_info'))
+			<div class="alert info-alert">
+				{{ session()->get('flash_info') }}
+			</div>
+		@endif
+		<div class="clear"></div>
+	</div>
+	<div class="user-info-module"></div>
 	<div id="blackout"></div>
 	<header>
 		<div id="user-navbar">
-			<div class="un-avatar"> <img src="{{ Auth::user()->avatar }}"> </div>
-			<div class="un-name"> {{ Auth::user()->name }} </div>
+			<a href="#" class="trigger-user-info" id="{{ Auth::user()->id }}"><div class="un-avatar"> <img src="{{ Auth::user()->avatar }}"> </div>
+			<div class="un-name"> {{ Auth::user()->name }} </div></a>
 			<a href="/logout" class="logout-button"> <i class="fa fa-sign-out"></i> </a>
 		</div>
 
@@ -97,7 +116,7 @@
 				</div>
 				<div class="rental-status">
 					<div class="rs-section rental-money tooltip" data-position="bottom" data-delay="50" data-tooltip="Stock value">
-						<small>$</small>{{ number_format(750.23, 2, ',', '.') }}
+						<div id="stock"><small>$</small>{{ number_format($rental->stock, 2, ',', '.') }}</div>
 					</div>
 				</div>
 				<div class="rental-status">
@@ -122,11 +141,59 @@
        	$('.tooltip').tooltip({delay: 50});
 
        	// Alert / Flash messages
-		    if($('.alert').is(':visible')){
-		        $('.alert').delay(3000).fadeOut();
-		    }
+	    if($('.alert').is(':visible')){
+	        $('.alert').delay(3000).fadeOut();
+	    }
+
+	    $('.trigger-user-info').click(function(){
+	    	userId = $(this).attr('id');
+	    	$.post('/rentalinfo/'+userId, { _token: "{{ csrf_token() }}" }, function(data) {
+	    		$('#blackout').fadeIn();
+	    		$('.user-info-module').html(data).fadeIn();
+
+	    		$('.close-ui').click(function(){
+			    	$('#blackout').fadeOut();
+			    	$('.user-info-module').fadeOut();
+			    });
+
+			    $('.trigger-follow').click(function(){
+			    	var href = $(this).attr('href');
+			    	follow(href, $(this));
+
+			    	return false;
+			    });
+	    	});
+	    	return false;
+	    });
+
+	    $('.trigger-follow').click(function(){
+	    	var href = $(this).attr('href');
+	    	follow(href, $(this));
+
+	    	return false;
+	    });
+
+	    function follow(href, element){
+	    	console.log(href);
+	    	$.post(href, { _token: "{{ csrf_token() }}" }, function(data) {
+	    		if(data.error === false){
+	    			element.parent().fadeOut(100, function(){
+	    				$(this).html(data.button).fadeIn(100);
+		    				$('.trigger-follow').click(function(){
+					    	var href = $(this).attr('href');
+					    	follow(href, $(this));
+
+					    	return false;
+					    });
+	    			});
+	    			showAlert(data.success_message, 'success-alert');
+	    		} else {
+	    			showAlert(data.error_message, 'error-alert');
+	    		}
+	    	});
+	    }
     });
    </script>
-   @yield('script');
+   @yield('script')
 </body>
 </html>

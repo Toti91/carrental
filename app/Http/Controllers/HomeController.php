@@ -28,7 +28,9 @@ class HomeController extends Controller
     public function index()
     {
         $rental = Auth::user()->rental;
-        return view('home')->with('rental', $rental);
+        $users = \App\User::get();
+        $followers = Auth::User()->followers;
+        return view('home')->with('rental', $rental)->with('users', $users)->with('followers', $followers);
     }
 
     public function newRental(){
@@ -42,6 +44,16 @@ class HomeController extends Controller
         $user->save();
 
         return redirect('/admin');
+    }
+
+    public function postRentalInfo($id){
+        $user = DB::table('users')
+            ->where('users.id', '=', $id)
+            ->join('car_rentals', 'car_rentals.user_id', '=', 'users.id')
+            ->select('users.*', 'car_rentals.name as rental', 'car_rentals.stock as stock', 'car_rentals.icon as rental_image', 'car_rentals.created_at as created')
+            ->first();
+        return view('windows/userinfo')->with('user', $user);
+
     }
 
     public function getDealership(){
@@ -64,7 +76,10 @@ class HomeController extends Controller
 
         if($rent_id){
             $rent_car = \App\userCar::find($rent_id);
-            return view('windows/carsale')->with('car', $car)->with('rental', $rental)->with('rent_car', $rent_car);
+            $histories = $rent_car->histories()->limit(5)->orderBy('start', 'DESC')->get();
+            $avarage = $rent_car->histories()->avg('total_rent');
+            $avarage_time = $rent_car->histories()->avg('time');
+            return view('windows/carsale')->with('car', $car)->with('rental', $rental)->with('rent_car', $rent_car)->with('histories', $histories)->with('avarageIncome', $avarage)->with('avarageTime', $avarage_time);
         }
         else {
             return view('windows/carsale')->with('car', $car)->with('rental', $rental);
@@ -75,9 +90,11 @@ class HomeController extends Controller
         $car = \App\Car::find($id);
         $rental = Auth::user()->rental;
         $total = $car->price * $amount;
+        $total_value = $this->totalCompanyValue();
         if($rental->money >= $total){
             $i = 0;
             while($i < $amount){
+                $stock_change = ((0.05 * $car->price) / $total_value) + 1;
                 $newCar = new \App\userCar;
                 $newCar->car_id = $id;
                 $newCar->user_id = Auth::user()->id;
@@ -86,6 +103,9 @@ class HomeController extends Controller
                 $newCar->price = (0.85*$car->price);
                 $newCar->rented = 0;
                 $newCar->save();
+
+                $rental->stock = $stock_change * $rental->stock;
+                $rental->save();
 
                 $i++;
             }
@@ -107,24 +127,23 @@ class HomeController extends Controller
             ->join('categories', 'categories.id', '=', 'car.category_id')
             ->select('car.*', 'car_user.km_count', 'car_user.price as new_price', 'car_user.rented', 'car_user.start', 'car_user.end', 'categories.category', 'car_user.id as rent_id', 'car_user.maint_count', 'car_user.plate')
             ->where('car_user.user_id', '=', Auth::user()->id)
-            ->orderBy('car_user.rented')
             ->orderBy('car_user.end')
             ->orderBy('car.name')
-            ->Get();
+            ->paginate(15);
         $categories = \App\Category::get();
         $rental = Auth::user()->rental;
         return view('garage')->with('cars', $cars)->with('rental', $rental)->with('categories', $categories);
     }
 
     public function rentCar($rent_id){
+        $return = array();
+
         $lease = \App\userCar::find($rent_id);
         $message = '';
         if($lease){
-            if(!$lease->rented){
+            if(time() > $lease->end){
                 //check if user owns car
                 if(Auth::user()->id == $lease->user_id){
-                    $return = array();
-
                     $car = \App\Car::find($lease->car_id);
                     $category = \App\Category::find($car->category_id);
                     $rental = Auth::user()->rental;
@@ -148,37 +167,64 @@ class HomeController extends Controller
                         $message = ' - This car broke down';
                         $malfunction = true;
                     }
-
+                    $now = time();
+                    $time = $time + 0;
+                    $later = $now + ($time*60)*60;
                     //update user_car
                     $lease->km_count = $total_hours;
                     $lease->price = $new_value;
                     $lease->rented = 1;
-                    $lease->start = time();
-                    $lease->end = time() + (($time*60)*60);
+                    $lease->start = $now;
+                    $lease->end = $later;
                     $lease->maint_count = $lease->maint_count + $time;
                     $lease->save();
 
+                    //Stock change
+                    $total_value = $this->totalCompanyValue();
+                    $stock_change = ($total_rent / $total_value) + 1;
+
                     $rental->money = $rental->money + $total_rent;
+                    $rental->stock = $stock_change * $rental->stock;
                     $rental->save();
+
+                    //Insert rent into history
+                    $history = new \App\History;
+                    $history->rent_id = $lease->id;
+                    $history->total_rent = $total_rent;
+                    $history->time = $time;
+                    $history->start = $lease->start;
+                    $history->end = $lease->end;
+                    $history->malfunction = $malfunction;
+                    $history->trigger_maintenance = ($lease->maint_count >= 100) ? true : false;
+                    $history->save();
+
 
                     session()->flash('flash_success', 'Car was rented for '.$time.' hours and you earned $'.$total_rent.$message);
 
+                    $return['error'] = false;
                     $return['new_gamma'] = $new_gamma;
                     $return['total_hours'] = $total_hours;
-                    $return['new_value'] =  '$'.number_format($new_value, 0, ',', '.');
+                    $return['total_rent'] = $total_rent;
+                    $return['time'] = $time;
+                    $return['new_value'] =  '<small>$</small>'.number_format($new_value, 0, ',', '.');
                     $return['malfunction'] = $malfunction;
-                    $return['end_time'] = $lease->end;
+                    $return['end_time'] = date("Y-m-d H:i:s", $lease->end);
                     $return['probability'] = $probability;
                     $return['maintenance'] = ($lease->maint_count >= 100) ? true : false;
+                    $return['maint_count'] = $lease->maint_count;
 
                     return $return;
                 }
             }
-            session()->flash('flash_error', 'This car is already leased!');
-            return 'This car is already leased!';
+            $return['error'] = true;
+            $return['error_message'] = 'This car is already leased!';
+            
+            return $return;
         }
-        session()->flash('flash_error', 'Something went wrong, try again!');
-        return 'Something went wrong, try again!';
+        $return['error'] = true;
+        $return['error_message'] = 'Something went wrong, try again!';
+        
+        return $return;
     }
 
     public function weightedrand($min, $max, $gamma) {
@@ -212,6 +258,8 @@ class HomeController extends Controller
     }
 
     public function maintainCar($id){
+        $return = array();
+
         $lease = \App\userCar::find($id);
         $car = \App\Car::find($lease->car_id);
         $rental = Auth::user()->rental;
@@ -223,21 +271,30 @@ class HomeController extends Controller
                 $rental->money = $rental->money - $car->maint_cost;
                 $rental->save();
 
-                session()->flash('flash_success', 'Car was maintained for $'.$car->maint_cost);
-                return redirect('/garage');
+                $return['error'] = false;
+                $return['cost'] = $car->maint_cost;
+                $return['maintenance'] = true;
+
+                return $return;
             }
             else {
-                session()->flash('flash_error', 'This car didnt need maintenance!');
-                return redirect('/garage');
+                $return['error'] = true;
+                $return['error_message'] = 'This car didnt need maintenance!';
+
+                return $return;
             }
         }
         else {
-            session()->flash('flash_error', 'You could\'nt afford it!');
-            return redirect('/garage'); 
+            $return['error'] = true;
+            $return['error_message'] = 'You could\'nt afford it!';
+            
+            return $return;
         }
     }
 
     public function fixCar($id){
+        $return = array();
+
         $lease = \App\userCar::find($id);
         $malfunction = $lease->malfunctions->first();
         if($malfunction){
@@ -246,18 +303,29 @@ class HomeController extends Controller
                 $rental->money = $rental->money - $malfunction->cost;
                 $rental->save();
 
-                session()->flash('flash_success', 'Car was fixed for $'.$malfunction->cost);
                 $lease->malfunctions()->detach($malfunction->id);
 
-                return redirect('/garage');
+                $return['error'] = false;
+                $return['cost'] = $malfunction->cost;
+
+                $return['maintenance'] = false;
+                if($lease->maint_count >= 100){
+                    $return['maintenance'] = true;
+                }
+
+                return $return;
             }
             else {
-                session()->flash('flash_error', 'You could\'nt afford it!');
-                return redirect('/garage'); 
+                $return['error'] = true;
+                $return['error_message'] = 'You could\'nt afford it!';
+                
+                return $return;
             }
         }
-        session()->flash('flash_error', 'Something went wrong, try again!');
-        return redirect('/garage');
+        $return['error'] = true;
+        $return['error_message'] = 'Something went wrong, try again!';
+            
+        return $return;
     }
 
     function generateFirstPart($length = 2) {
@@ -291,5 +359,44 @@ class HomeController extends Controller
         $lease->malfunctions()->attach($malfunction->id);
 
         return true;
+    }
+
+    public function totalCompanyValue(){
+        $rental = Auth::user()->rental;
+        $cars = Auth::user()->cars()->sum('price');
+
+        $total_value = $cars + $rental->money;
+
+        return $total_value;
+    }
+
+    public function follow($id){
+        $return = array();
+        if($id != \Auth::user()->id){
+            $user = \App\User::find($id);
+            if($user){
+                if(!\App\Follow::ifFollower(Auth::user()->id, $id)){
+                    \Auth::user()->followers()->attach($id);
+
+                    $return['error'] = false;
+                    $return['success_message'] = 'You are now following '. $user->name;
+                    $return['button'] = '<a href="/follow/'.$id.'" class="trigger-follow unfollow"><i class="fa fa-user-times"></i> Unfollow</a>';
+                    return $return;
+                } else {
+                    \Auth::user()->followers()->detach($id);
+                    $return['error'] = false;
+                    $return['success_message'] = 'You are no longer following '. $user->name;
+                    $return['button'] = '<a href="/follow/'.$id.'" class="trigger-follow"><i class="fa fa-user-plus"></i> Follow</a>';
+                    return $return;
+                }
+            }
+            $return['error'] = true;
+            $return['error_message'] = 'Can\'t find user.';
+            return $return;
+        }
+        $return['error'] = true;
+        $return['error_message'] = 'Can\'t follow your self.';
+
+        return $return;
     }
 }

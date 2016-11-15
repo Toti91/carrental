@@ -1,0 +1,116 @@
+.left-content {
+	float:left;
+	width:60%;
+	box-sizing: border-box;
+	padding:10px;
+}
+.right-content {
+	float:right;
+	width:40%;
+	box-sizing: border-box;
+	padding:10px;
+}
+
+.dashboard-users {
+	width:100%;
+	.du-nav {
+		height:40px;
+		width:100%;
+		.du-nav-item {
+			float:left;
+			.duni-icon {
+				width:40px;
+				float:left;
+				height:40px;
+				text-align: center;
+				line-height: 40px;
+				color:#fff;
+				box-shadow:inset 0px -5px 5px rgba(0,0,0, 0.1);
+			}
+		}
+		.active {
+			.duni-icon {
+				box-shadow: none;
+			}
+		}
+		.duni-follow {
+			background:#E96636;
+		}
+		.duni-stock {
+			background:#739AAD;
+		}
+		.duni-search {
+			background:#61C170;
+		}
+	}
+	.du-section {
+		width:100%;
+		.dus-header {
+			height:45px;
+			width:100%;
+			color:#fff;
+			font-weight: 300;
+			border-bottom:5px solid #f8f8f8;
+			line-height: 40px;
+			text-indent:10px;
+		}
+	}
+	.dus-follow {
+		.dus-header {
+			background:#E96636;
+		}
+		.single-user {
+			padding:10px 5px;
+			height:60px;
+			border-bottom:1px solid #f8f8f8;
+			.su-avatar {
+				float:left;
+				height:40px;
+				width:40px;
+				overflow:hidden;
+				border:1px solid #888;
+				img {
+					width:40px;
+				}
+			}
+			.su-name {
+				color:#444;
+				float:left;
+				margin-left:10px;
+				line-height:40px;
+				font-weight: 300;
+
+			}
+			.trigger-follow {
+				overflow:hidden;
+				float:right;
+				height:30px;
+				width:30px;
+				margin-top:15px;
+				box-sizing: border-box;
+				text-align: center;
+				line-height: 30px;
+				color:#f8f8f8;
+				background: #53AEED; /* Old browsers */
+				background: -moz-linear-gradient(top,  #53AEED 0%, #60abf8 44%, #4EAEF3 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top,  #53AEED 0%,#60abf8 44%,#4EAEF3 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom,  #53AEED 0%,#60abf8 44%,#4EAEF3 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#53AEED', endColorstr='#4EAEF3',GradientType=0 ); /* IE6-9 */
+				box-shadow:0px 3px 0px #399AE2;
+			}
+			.unfollow {
+				background: #E85152; /* Old browsers */
+				background: -moz-linear-gradient(top,  #E85152 0%, #EF5356 44%, #E95352 100%); /* FF3.6-15 */
+				background: -webkit-linear-gradient(top,  #E85152 0%,#EF5356 44%,#E95352 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to bottom,  #E85152 0%,#EF5356 44%,#E95352 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				box-shadow: 0px 3px 0px #D04346;
+			}
+			.trigger-follow:hover {
+				opacity:0.8;
+			}
+		}
+		.single-user:hover {
+			background:#f8f8f8;
+		}
+	}
+}

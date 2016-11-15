@@ -16,6 +16,22 @@ class userCar extends Model
 	{
 		return $this->belongsTo('App\Car');
 	}
+	public function Histories()
+	{
+		return $this->hasMany('App\History', 'rent_id');
+	}
+
+	public static function getUserTotalCars($id){
+		$total = \App\userCar::where('user_id', '=', $id)->count();
+
+		return number_format($total, 0, ',', '.');
+	}
+
+	public static function getUserTotalHours($id){
+		$total = \App\userCar::where('user_id', '=', $id)->sum('km_count');
+
+		return number_format($total, 0, ',', '.');
+	}
 
 	public static function countTotal(){
 		$total = \App\userCar::where('user_id', '=', \Auth::user()->id)->count();
@@ -24,7 +40,8 @@ class userCar extends Model
 	}
 
 	public static function countParked(){
-		$total = \App\userCar::where('user_id', '=', \Auth::user()->id)->where('rented', '=', 0)->count();
+		$time = time() + 10;
+		$total = \App\userCar::where('user_id', '=', \Auth::user()->id)->where('end', '<', $time)->count();
 
 		return $total;
 	}

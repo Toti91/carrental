@@ -43,4 +43,14 @@ class User extends Authenticatable
     public function rental(){
         return $this->hasOne('\App\Rental', 'user_id');
     }
+
+    public function Cars()
+    {
+        return $this->hasMany('App\userCar', 'user_id');
+    }
+
+    public function followers()
+    {
+        return $this->belongsToMany('App\User','follow', 'user_id', 'user_follow_id');
+    }
 }
